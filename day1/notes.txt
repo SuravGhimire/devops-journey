@@ -1,0 +1,9 @@
+mkdir : make directory
+pwd = shows current folder location
+ls = lists files and folder 
+nano = helps to open a notebook to note something
+cd = change directory
+cd .. = delete/remove directory
+mv = move/rename files
+cat = to view nano notes ; $ cat notes.txt
+
