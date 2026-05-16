@@ -1,0 +1,24 @@
+.What is chmod?
+ => chmod is a Linux command used to change the permissions of files and directories.  
+     [chmod u+x testfile]
+2.What is Executable Permission?
+=> The executable permission (x) allows a file to be run as a program or script. 
+  Without it, even a valid script (like a Bash or Python file) cannot be executed. 
+
+  For example
+  chmod +x myscript.sh
+  ./myscript.sh  # Now it can run   
+
+3.What Does ls -l Show?
+=>The ls -l command displays files in long format, showing detailed information per file/directory:
+ 
+(-rw-rw-r-- 1 user group 1024 Jan 1 12:00 filename)
+
+(Means: -rw-rw-r-- :
+owner permissions
+group permissions
+others permissions)
+
+4.What Are Hidden Files?
+=> Hidden files in Linux are files or directories whose names start with a dot (.)
+=> To view then we use : terminal = ls -a or ls -la
