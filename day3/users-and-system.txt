@@ -1,0 +1,19 @@
+1.what is root user?
+  The root user is the superuser in Linux, possessing unrestricted access to all commands, files, and system resources. 
+ It can modify system configurations, manage users, install software, and access every directory—including other user's home folders.
+
+2.what is sudo?
+ sudo (short for "superuser do") allows authorized users to run commands with elevated privileges—typically as
+ root—without logging in as root.
+   Instead of using the root password, users authenticate with their own password. This enhances security by limiting
+ exposure of the root account and enabling fine-grained control over who can perform administrative tasks.
+
+3.what is /etc?
+ The /etc directory stores system-wide configuration files.
+
+4.What is /home?
+ The /home directory contains personal directories for each user (e.g., /home/john).
+
+5. what does apt do?
+  APT (Advanced Package Tool) is a package management system used in Debian-based Linux distributions like Ubuntu. 
+It automates the process of installing, updating, upgrading, and removing software packages.
