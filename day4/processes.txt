@@ -1,0 +1,30 @@
+1. What is process?
+
+  In Linux, a process is a running instance of a program. Whenever you execute a command or launch an application,
+ the system creates a process to manage its execution. Each process runs in its own environment and can perform
+ tasks independently.
+
+2. What is PID?
+ 
+ PID stands for Process IDentifier.  It is a unique number assigned by the Linux kernel to every running process.
+And every process has an unique PID.
+
+3.What does top Do?
+
+ The top command provides a real-time, dynamic view of running processes.  It continuously updates the display, showing:
+
+-Processes consuming the most CPU and memory
+-System load, uptime, and resource usage
+-Interactive controls (e.g., press M to sort by memory, P by CPU, q to quit) 
+
+It’s ideal for monitoring system performance live.
+
+
+4. What does ps aux Show?
+
+ The ps aux command displays a snapshot of all running processes across the system:
+
+a: All processes with a terminal
+u: User-oriented format (shows CPU and memory usage)
+x: Processes without a controlling terminal (e.g., background daemons) 
+
