@@ -1,0 +1,29 @@
+1, What is IP?
+
+ An IP address (Internet Protocol address) is a unique numerical label assigned to each device connected to a network using the Internet Protocol.
+It identifies the device and enables communication across networks.
+
+2.What is ping?
+
+ ping is a command-line utility that tests connectivity between your device and another networked device. 
+
+3. What does curl DO?
+
+ curl is a command-line tool for transferring data to or from a server using various protocols like HTTP, HTTPS, FTP, and more. Common uses include:
+
+-Fetching web page content
+-Testing APIs (GET, POST, etc.)
+-Uploading/downloading files
+-Checking HTTP headers with curl -I 
+
+Unlike ping, curl can test specific ports and services (e.g., curl -v telnet://host:22).
+ 
+4. What does I observe today?
+
+ Using ping, I observes network reachability and latency (response time).  With curl, I  observe:
+
+-Whether a specific service or port is open (e.g., web server on port 80/443)
+-HTTP response headers (status codes, server type, content type)
+-Content delivery from APIs or websites 
+
+Together, these tools help diagnose connectivity issues, verify service availability, and troubleshoot network configurations. 
