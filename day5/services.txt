@@ -1,0 +1,48 @@
+1. What is a Service?
+
+ A service is a background program that runs continuously in Linux.
+
+Examples:
+-SSH
+-Docker
+-nginx
+-cron
+
+Services help Linux perform system tasks automatically.
+
+2. What is systemctl?
+
+ 'systemctl' is a command used to manage services in Linux.
+
+It can:
+-start services
+-stop services
+-restart services
+-check service status
+
+eg: systemctl status cron
+
+3.What does cron do?
+
+ 'cron' is a Linux service used for scheduling tasks automatically.
+
+Examples:
+
+-automatic backups
+-scheduled scripts
+-log cleanup 
+
+4. Commands I use today: 
+
+i. For checking services: 
+   systemctl list-units --type=service
+
+ii. For check services ststus:
+   systemctl status cron
+
+iii. For stop service:
+   sudo systemctl stop cron
+
+iv. To start service:
+ sudo systemctl start cron
+    
