@@ -1,0 +1,68 @@
+1. What are Logs?
+
+Logs are records of system events and activities in Linux.
+
+Logs help administrators and DevOps engineers:
+-troubleshoot problems
+-monitor systems
+-check errors
+-understand what happened in the system
+
+Examples:
+-failed login attempts
+-service crashes
+-software errors
+-system startup messages
+
+2. What does journalctl do?
+
+journalctl is a Linux command used to view system logs.
+
+It reads logs collected by:
+  systemd
+
+eg: journalctl -n 20 => It show recent logs and the 20 specify the 20 logs
+
+& journalctl -f => It follow logs live.
+
+This is useful for:
+
+-debugging services
+-monitoring systems
+-troubleshooting issues
+
+3. What is SSH? 
+ SSH stands for Secure Shell.
+SSH is a protocol used to securely connect another computer or server remotely through terminal.
+
+Using SSH, administrators can:
+
+-access remote servers
+-run commands remotely
+-manage cloud servers
+-transfer files securely
+
+
+4. Why is SSH Important?
+
+ SSH is one of the most important tools in DevOps and Cloud.
+
+DevOps engineers use SSH to:
+
+-connect to AWS EC2 servers
+-manage Linux servers remotely
+-deploy applications
+-troubleshoot production systems
+
+Without SSH, remote server management becomes difficult.
+
+
+5 Commands that I used today:
+
+i. journalctl -n 20 : view logs
+ii. journalctl -f : Follow logs in real time
+iii. ssh : Check SSH command
+iv. Find SSH location : which ssh
+  
+etc
+
