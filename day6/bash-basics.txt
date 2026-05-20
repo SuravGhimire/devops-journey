@@ -1,3 +1,4 @@
+
 1. What is bash script ?
  A Bash script is a file that contains Linux commands written together in sequence.
 Instead of typing commands one by one manually, we can store them in a script and execute them automatically.
@@ -28,3 +29,26 @@ eg: ./first-script.sh
  2.chmod +x first-script.sh = make executable
  3.'./first-script.sh' = run script
 
+----------------------------------------------------------------------------------------------------------
+
+1. What is a Variable?
+ A variable is used to store data/value in a Bash script.
+Variables help reuse values multiple times inside scripts.
+
+eg: name="saurav"
+
+here name is variable and saurav is stored value.
+
+2.What does read do?
+ read is a Bash command used to take input from the user through terminal.
+eg: read name 
+
+3.How does user input work in Bash?
+ A Bash script can ask user for input and store it in variables.
+
+Example:
+
+echo "Enter your name:"
+read name
+
+echo "Welcome $name"
