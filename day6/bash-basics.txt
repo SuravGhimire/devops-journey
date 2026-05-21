@@ -52,3 +52,27 @@ echo "Enter your name:"
 read name
 
 echo "Welcome $name"
+
+------------------------------------------------------------------------------------------------------------
+
+1,What does cp do?
+ cp is used to copy files or folders in Linux.
+ 
+eg: cp file.txt backup/   => Copies files into backup folder
+
+2.What does df -h do?
+
+ Shows disk storage usage in human-readable format.
+
+Useful for checking:
+-available storage
+-used storage
+-server disk space
+
+3.What does free -h do?
+
+ Shows system memory (RAM) usage in human-readable format.
+
+Useful for:
+-monitoring RAM
+-checking memory usage
