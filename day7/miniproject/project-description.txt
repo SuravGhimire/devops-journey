@@ -1,0 +1,13 @@
+So what are we building on this mini project:
+
+=> A simple linux admin tookkit script.
+
+the script will :
+1. show system info
+2. show IP address
+3. show disk usage
+4. create log file
+5. save output automatically
+
+and this all things is combination of bash scripting , linux command and automation mindset.
+
