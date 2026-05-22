@@ -1,0 +1,35 @@
+So I am sumarizing the basic command that I used to become fluent in Linux(ubuntu).
+
+pwd  = Shows current working directory.
+ls -la = shows files,hidden files, permission and detailed info.
+chmod = change file permissions  eg: chmod +x filename.sh
+sudo = Runs command with administrator/root privileges.
+echo = print in the terminal
+mkdir = make directory
+cd = change directory
+rm = delete files/directory eg: rm -rf devops\filename 
+nano / vim = Opens note terminal eg: nano filename.txt
+touch = create an empty file 
+cp = copy a file eg: cp file.txt backup.txt
+mv = move or rename file 
+cat = Print file contents
+ip addr =shows ip address
+ip route = shows routing table
+ping google.com = test network connectivity
+
+and so on.
+
+-----------------------------------------------------------------------------------------------------
+
+process = a running program in linus  eg command: ps aus 
+                                                  top
+
+service = Abackground program runnig continuously.
+eg:
+-SSH
+-Docker
+-cron
+
+SSH = Secure remote access to another machine/server.
+
+
