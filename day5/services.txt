@@ -45,4 +45,24 @@ iii. For stop service:
 
 iv. To start service:
  sudo systemctl start cron
-    
+
+------------------------------------------------------------------------------------------
+trying vim:
+
+vim is a powerfull editor then nano , nano is beginner friendly terminal editor with on-screen shortcuts
+
+how to use vim :
+
+vim file.txt  = open file 
+
+then when the file is opened;
+
+i        = enter insert mode ......start typing
+Esc      = return to normal mode
+:w       = save
+:q       = quite
+:wq      = save & quite
+:q!      = quite without saving
+
+etc
+
