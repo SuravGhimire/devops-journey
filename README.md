@@ -1,11 +1,14 @@
 # DevOps Journey
-# DevOps Journey
 
 This repository contains my daily DevOps and Linux learning progress.
 
-## Completed Topics
+Started: May 2026
 
-### Linux Basics
+---
+
+## Week 1 - Linux Foundation
+
+Topics covered:
 - Linux commands
 - File permissions
 - Users and sudo
@@ -15,16 +18,27 @@ This repository contains my daily DevOps and Linux learning progress.
 - Bash scripting
 - Linux automation
 
+---
+
 ## Mini Projects
+
 - System health check script
 - Backup automation script
 - DevOps toolkit script
 
-More topics coming soon:
-- Git
+---
+
+## Upcoming Topics
+
+- Git & GitHub
+- Networking for DevOps
 - AWS
 - Docker
 - Kubernetes
 - CI/CD
 
-Started: May 2026
+---
+
+## Goal
+
+To become a DevOps & Cloud Engineer through consistent hands-on learning and projects.
