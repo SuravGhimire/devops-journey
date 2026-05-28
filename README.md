@@ -28,9 +28,14 @@ Topics covered:
 
 ---
 
+##Git & Github Progress
+
+-Day 1 : How Git works
+
+---
+
 ## Upcoming Topics
 
-- Git & GitHub
 - Networking for DevOps
 - AWS
 - Docker
