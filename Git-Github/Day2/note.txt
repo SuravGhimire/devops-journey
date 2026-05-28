@@ -1,0 +1,160 @@
+
+GIT-GITHUB DAY 2 : BRANCHING & MERGING
+
+1. git branch
+--------------------------------
+Function:
+Lists all branches in repository.
+
+When to use:
+To check available branches.
+
+Example:
+git branch
+
+Output:
+* main
+feature-readme
+
+Meaning:
+* = current active branch
+
+
+2. git branch <branch-name>
+--------------------------------
+Function:
+Creates a new branch.
+
+When to use:
+When starting new feature development.
+
+Example:
+git branch feature-readme
+
+What it does:
+Creates branch but does NOT switch to it.
+
+
+3. git checkout <branch-name>
+--------------------------------
+Function:
+Switches to another branch.
+
+When to use:
+When moving between branches.
+
+Example:
+git checkout feature-readme
+
+What it does:
+Changes your working branch.
+
+
+4. git status
+--------------------------------
+Function:
+Shows current repository status.
+
+When to use:
+Before adding or committing changes.
+
+Example:
+git status
+
+Shows:
+- Modified files
+- Untracked files
+- Branch status
+
+
+5. git add <file>
+--------------------------------
+Function:
+Stages changes.
+
+When to use:
+Before committing changes.
+
+Example:
+git add README.md
+
+
+6. git commit -m "message"
+--------------------------------
+Function:
+Saves staged changes.
+
+When to use:
+After meaningful updates.
+
+Example:
+git commit -m "Added Git Day 2 progress"
+
+
+7. git log --oneline
+--------------------------------
+Function:
+Shows commit history in short form.
+
+When to use:
+To review previous commits.
+
+Example:
+git log --oneline
+
+
+8. git merge <branch-name>
+--------------------------------
+Function:
+Combines branch changes into current branch.
+
+When to use:
+After completing feature work.
+
+Example:
+git merge feature-readme
+
+What it does:
+Merges feature branch into active branch.
+
+
+9. git push
+--------------------------------
+Function:
+Uploads local commits to GitHub.
+
+When to use:
+After committing changes.
+
+Example:
+git push
+
+
+10. git branch -d <branch-name>
+--------------------------------
+Function:
+Deletes branch after merge.
+
+When to use:
+When feature branch is no longer needed.
+
+Example:
+git branch -d feature-readme
+
+
+KEY LEARNING:
+
+- Branches allow isolated development
+- Main branch stays stable
+- Feature branches are used for new work
+- Merge combines completed work
+- Delete branches after merge
+
+
+REAL WORLD DEVOPS USE:
+
+Teams create branches for:
+- New features
+- Bug fixes
+- Testing
+- Deployment preparation
