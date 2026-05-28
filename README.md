@@ -31,7 +31,7 @@ Topics covered:
 ##Git & Github Progress
 
 -Day 1 : How Git works
-
+-Day 2 : Branching, Switching branches and Merging
 ---
 
 ## Upcoming Topics
