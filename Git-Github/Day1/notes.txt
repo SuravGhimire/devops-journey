@@ -1,0 +1,48 @@
+Git & GitHub - Day 1
+
+Topic: How Git Works
+
+Concepts Learned:
+
+1. Working Directory
+- The project files currently being edited
+
+2. Staging Area
+- Temporary area where changes are prepared before commit
+
+Command:
+git add <filename>
+
+3. Repository
+- Permanent saved history of project changes
+
+Command:
+git commit -m "message"
+
+4. Commit
+- A snapshot of project at a specific point
+
+5. HEAD
+- Pointer to the current commit
+
+
+
+Git Workflow:
+
+Working Directory
+   ↓
+git add
+   ↓
+Staging Area
+   ↓
+git commit
+   ↓
+Repository
+
+Practice Done:
+- Checked git status
+- Edited README.md
+- Added changes to staging
+- Created commit
+- Pushed to GitHub
+
