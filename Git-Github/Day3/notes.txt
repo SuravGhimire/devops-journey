@@ -1,0 +1,94 @@
+Git-GitHub Day 3: Merge Conflicts + Git Stash
+
+Today I learned:
+-What merge conflicts are
+-How to resolve them
+-How to temporarily save unfinished work using stash
+-How teams handle conflicting code changes
+
+
+Merge Conflict:
+A merge conflict happens when:
+
+Two branches change the same line in a file.
+Git doesn’t know which version to keep, so it asks user to decide.
+
+
+So what I practice today, I created a new branch named conflict-practice , there I make some changes in the title Git Day 2 , save and git add and commit , 
+Then I git checkout main ,I returned to the main branch and also make change in that same line and when I merge branch using : git merge conflict-practice
+
+Some message arise:
+
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed
+
+SO this is a real merge conflict .
+
+To See the conflict markers , I visit the README.md file , there I observed:
+
+
+##Git & Github Progress
+
+-Day 1 : How Git works
+<<<<<<< HEAD
+-Git Day 2 - Branching and Collaboration
+=======
+-Git Day 2
+>>>>>>> conflict-practice
+---------------------------------------------------------------------
+
+HEAD = main branch version
+Lower section = incoming branch version
+
+So TO reslove conflict :
+I replace all that with a line and delete all conflict markers and then save , add , commit and push.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Topics Covered:
+1. Merge Conflict
+2. Conflict Resolution
+3. Git Stash
+
+Commands Learned:
+
+git checkout -b branch-name
+Creates and switches to new branch
+
+git merge branch-name
+Combines branches
+
+Conflict markers:
+<<<<<<<
+=======
+>>>>>>>
+
+-------------------------------------------
+( Git Stash:
+Stash lets you temporarily save unfinished work.
+
+Think of it like:
+“Pause this work, I’ll come back later.” )
+
+
+git stash
+-Temporarily saves changes
+
+git stash list
+-Shows saved stashes
+
+git stash apply
+-Restores stash
+
+git stash drop
+-Deletes stash
+
+In git stash , I did added a temperory note in the day2 note.txt then ,using git status , I see some modified files , then did git stash ,it Saves user's uncommitted changes,Cleans working directory , then git status was clean 
+And to view stash I use git stash list , it shows some stash@{0} and to restor I use git stash apply, then git status the changes are back and lastly to remove stash , used git stash drop. 
+But If i had done git add , commit and push after , git stash apply , those temporary file changes would have been permanent.
+
+-------------------------------------------------------------
+Key Learning:
+Conflicts happen when two branches edit same content.
+Stash helps pause unfinished work. 
