@@ -30,9 +30,9 @@ Topics covered:
 
 ##Git & Github Progress
 
--Day 1 : How Git works
-<<<<<<< HEAD
--Git Day 2 - Branching and Collaboration
+- Day 1 : How Git works
+- Day 2 - Branching and Collaboration
+- Day 3 : Merge conflict + Git stash
 ---
 
 ## Upcoming Topics
