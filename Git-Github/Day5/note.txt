@@ -1,0 +1,26 @@
+GIT-GITHUB DAY 5 : .gitignore + Clean Repositories
+
+What is .gitignore?
+ A file that tells Git which files/folders to ignore.
+
+Why use it?
+- Prevent clutter
+- Avoid tracking temporary files
+- Protect secrets
+- Keep repo clean
+
+Common ignored files:
+---------------------
+*.log
+.env
+cache/
+__pycache__/
+.vscode/
+
+Important:
+-----------
+Never commit secrets to GitHub.
+
+Key Learning:
+-------------
+Clean repositories are professional repositories.
