@@ -1,0 +1,155 @@
+GIT-GITHUB DAY 4 : Undoing Changes 
+
+Today I learn how to safely fix mistakes using git restore, reset and revert.
+
+Today I learned:
+
+1. git restore → discard file changes
+2. git reset → unstage files
+3. git revert → safely undo commits
+4. When to use each command
+
+
+SO 1st 'git restore' :
+-------------------
+What it does:
+-------------
+   It removes changes from a file and restores the last committed version.
+
+Use when:
+---------
+“I edited something by mistake and want to discard it.”
+
+eg: git restore filename
+
+So I created a file name restore-practice.txt and add some text on it , save . 
+Then git status , it shows : modified : restore-practice.txt  & I dont want to save it .
+And to undo it , I use git restore restore-preactice.txt and then git status , Hence
+Git restored the last committed version.
+
+git reset:
+----------
+What it does:
+------------
+ Removes file from staging area.
+
+Use when:
+--------
+“I added wrong file using git add.”
+
+so for this , I created a file practice.txt and Stage it by using git add practice.txt , check git status
+I observe:  new file: practice.txt (staged)
+
+So to unstage it :
+git reset practice.txt
+
+& git status 
+Now it becomed unstaged and then I delete file : rm practice.txt
+
+
+git revert:
+-----------
+
+What it does:
+-------------
+Creates a new commit that reverses a previous commit.
+
+Use when:
+--------
+-User already committed
+-User already pushed
+-User need to safely undo
+
+This is safest for shared repos.
+
+
+SO I created a file , write note and then git add,commit and push .
+
+TO view commits : git log --oneline,
+The last comitte was like 26121ff (HEAD -> main, origin/main, origin/HEAD) Created revert practice file
+So To revert it : I used git revert <commit-hash>  i.e:
+			git revert 26121ff
+
+then Git opens editor , I keep default message and save . 
+Then verify using git log --oneline
+I see : Revert "Created revert practice file".
+And check using ls , the file was gone . 
+then I did git push , to push and make branch upto date .
+
+-------------------------------------------------------------------------------------------
+Key Difference:
+git restore:
+------------
+Undo file edits
+
+git reset:
+----------
+Remove from staging
+
+git revert:
+-----------
+Undo committed work safely
+
+
+Remember:
+--------
+Restore → working directory
+Reset → staging area
+Revert → commit history
+
+
+--------------------------------------------------------------------------------------------------
+
+Today's Topics:
+1. git restore
+2. git reset
+3. git revert
+
+Commands learned:
+----------------
+git restore
+Purpose:
+-------
+Discard uncommitted file changes
+
+Usage:
+------
+git restore <file>
+
+When:
+-----
+Undo accidental edits
+
+
+git reset
+Purpose:
+--------
+Remove file from staging area
+
+Usage:
+-----
+git reset <file>
+
+When:
+-----
+Wrong file was staged
+
+
+git revert
+Purpose:
+--------
+Undo committed changes safely
+
+Usage:
+------
+git revert <commit-hash>
+
+When:
+-----
+Need to reverse pushed commit
+
+
+Key Learning:
+restore = working directory
+reset = staging area
+revert = commit history
