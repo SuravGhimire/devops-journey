@@ -33,6 +33,7 @@ Topics covered:
 - Day 1 : How Git works
 - Day 2 - Branching and Collaboration
 - Day 3 : Merge conflict + Git stash
+- Day 4 : Undoing Changes (restore, reset, revert)
 ---
 
 ## Upcoming Topics
