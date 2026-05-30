@@ -34,6 +34,7 @@ Topics covered:
 - Day 2 - Branching and Collaboration
 - Day 3 : Merge conflict + Git stash
 - Day 4 : Undoing Changes (restore, reset, revert)
+- Day 5 : .gitignore + Clean Repositories
 ---
 
 ## Upcoming Topics
