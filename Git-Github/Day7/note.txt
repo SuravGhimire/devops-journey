@@ -1,0 +1,20 @@
+GIT-GITHUB DAY 7 : Pull Request (PR) Workflow
+
+Workflow:
+1. Create feature branch
+2. Make changes
+3. Commit changes
+4. Push branch
+5. Open pull request
+6. Review code
+7. Merge into main
+
+Why use PRs?
+------------
+- Safe collaboration
+- Code review
+- Better quality control
+- Prevent direct production mistakes
+
+Key Learning:
+Professional teams merge through pull requests.
