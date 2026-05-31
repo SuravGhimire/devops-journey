@@ -1,0 +1,41 @@
+GIT-GITHUB DAY 6 : Git Tags + Versioning
+
+What is a tag?
+A label for specific commits.
+
+Why use tags?
+--------------
+- Mark releases
+- Track versions
+- Deployment checkpoints
+
+Types:
+
+Lightweight Tag
+---------------
+git tag v1.0
+
+Annotated Tag
+-------------
+git tag -a v1.1 -m "message"
+
+Push tag:
+--------
+git push origin <tag>
+
+View tag:
+---------
+git show <tag>
+
+
+
+NOTE: tag donot push automatically , we have to push them:
+
+git push origin <tag name>
+eg:
+---
+git push origin v1.0
+
+-------------------------------------------------------------
+Key Learning:
+Tags mark important project milestones.
