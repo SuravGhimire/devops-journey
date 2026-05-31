@@ -31,10 +31,12 @@ Topics covered:
 ##Git & Github Progress
 
 - Day 1 : How Git works
-- Day 2 - Branching and Collaboration
+- Day 2 : Branching and Collaboration
 - Day 3 : Merge conflict + Git stash
 - Day 4 : Undoing Changes (restore, reset, revert)
 - Day 5 : .gitignore + Clean Repositories
+- Day 6 : Git Tags + Versioning
+
 ---
 
 ## Upcoming Topics
