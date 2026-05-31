@@ -36,7 +36,7 @@ Topics covered:
 - Day 4 : Undoing Changes (restore, reset, revert)
 - Day 5 : .gitignore + Clean Repositories
 - Day 6 : Git Tags + Versioning
-
+- Day 7 : Pull Request Workflow
 ---
 
 ## Upcoming Topics
