@@ -18,3 +18,28 @@ Why use PRs?
 
 Key Learning:
 Professional teams merge through pull requests.
+
+--------------------------------------------------------------------------------------------------------
+
+SO what I did and learn today for PR workflow:
+
+   As I have mentioned the PR workfolw above ,first of all I creted a new feature branch, So that my work is isolated ,that helps to avoid breaking production code.
+then start making changes on that branch , I created Day7 folder and add txt file and write some notes on it, then save , add, commit and push ; this time I use git push -u origin <branch name> ; 
+as -u links local branch to remote.
+
+Then comes the GitHub part;
+ I went to repository , I did see Compare & pull request -----> click it
+
+It shows Title, Description ; fill it . And click -----> Create Pull Request
+
+Then ; Merge PR : click -----> Merge pull request then confirm merge (This merges that feature branch into main)
+
+after merging Github will suggest deleting branch -------> delete it.
+
+
+Then I switch back to terminal:
+-Checkout to main branch 
+-Pull latest merge changes using git pull
+-Delete local feature branch : git branch -d feature/day7-pr-workflow
+
+So this was the simple PR workflow.
