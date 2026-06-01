@@ -1,0 +1,84 @@
+Networking Day 1 : IP Address, Localhost, Private vs Public IP
+
+Topics:
+- What is networking
+- IP address
+- Private IP
+- Public IP
+- Localhost
+- 127.0.0.1
+
+
+1. What is Networking?
+---------------------
+Networking is simply:
+ How computers talk to each other.
+-Just like people need phone numbers, computers need addresses.
+-That address is called an IP address.
+
+2. What is an IP Address?
+------------------------
+IP = Internet Protocol
+An IP address is the unique address of a device on a network.
+
+Example:
+192.168.1.10
+
+3. Two Types of IP Addresses:
+-----------------------------
+Private IP:
+-----------
+Used inside your local network (home WiFi, office network)
+
+Examples:
+192.168.x.x
+10.x.x.x
+172.16.x.x – 172.31.x.x
+
+Public IP:
+----------
+This is your network’s address on the internet.
+
+Example:
+49.x.x.x
+
+Websites and servers on the internet see this.
+router usually has the public IP, not our laptop.
+
+* Internet
+   ↓
+Public IP (Router)
+   ↓
+Private IPs inside home
+   ├── Laptop (192.168.1.5)
+   ├── Phone (192.168.1.8)
+   └── TV (192.168.1.10)
+
+4. What is Localhost?
+---------------------
+Special address:
+127.0.0.1
+
+It means:
+“Talk to this same machine.”
+
+When a program runs locally, it often runs on:
+http://localhost
+
+That means your browser is talking to a server running on our own laptop.
+
+
+Commands practiced:
+-------------------
+ip addr
+ping localhost
+python3 -m http.server 8000
+
+Observations:
+Private IP: inet 127.0.0.1/8 
+Localhost ping: 127.0.0.1
+Server test: python3 -m http.server 8000 ; It starts serving at port 8000
+
+Key takeaway:
+Computers communicate using IP addresses.
+localhost refers to the same machine.
