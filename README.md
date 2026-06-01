@@ -28,7 +28,7 @@ Topics covered:
 
 ---
 
-##Git & Github Progress
+## Git & Github Progress
 
 - Day 1 : How Git works
 - Day 2 : Branching and Collaboration
@@ -37,11 +37,16 @@ Topics covered:
 - Day 5 : .gitignore + Clean Repositories
 - Day 6 : Git Tags + Versioning
 - Day 7 : Pull Request Workflow
+
 ---
+
+## Networking for Devops
+
+- Day 1 : Networking , IP , Localhost
+
 
 ## Upcoming Topics
 
-- Networking for DevOps
 - AWS
 - Docker
 - Kubernetes
