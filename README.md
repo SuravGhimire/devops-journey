@@ -43,7 +43,7 @@ Topics covered:
 ## Networking for Devops
 
 - Day 1 : Networking , IP , Localhost
-
+- Day 2: Ports, HTTP, HTTPS, SSH
 
 ## Upcoming Topics
 
