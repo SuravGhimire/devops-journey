@@ -1,0 +1,38 @@
+Networking Day 2
+
+Topics:
+- Ports
+- HTTP
+- HTTPS
+- SSH
+
+What is a Port?
+A port identifies a specific service running on a device.
+
+Common Ports:
+22 = SSH
+80 = HTTP
+443 = HTTPS
+
+HTTP:
+Used for websites.
+Default Port = 80
+
+HTTPS:
+Secure version of HTTP.
+Default Port = 443
+
+SSH:
+Used for remote Linux access.
+Default Port = 22
+
+Commands Practiced:
+ss -tuln
+ss -tuln | grep 8000
+python3 -m http.server 8000
+
+____________________
+
+Key Takeaway:
+IP identifies the device.
+Port identifies the service.
