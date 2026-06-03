@@ -1,0 +1,48 @@
+Networking Day 3 : DNS (Domain Name System)
+
+What is DNS?
+DNS translates domain names into IP addresses.
+
+Example:
+github.com -> IP address 
+
+Why DNS?
+Humans remember names.
+Computers use IP addresses.
+
+Website Loading Process:
+------------------------
+Browser
+↓
+DNS Lookup
+↓
+IP Address
+↓
+Connect to Server
+↓
+Website Opens
+
+Commands Practiced:
+ping google.com: 
+-----------------
+   It shows the ip adress , PING google.com (172.217.27.206) 56(84) bytes of data. 64 bytes from bom07s15-in-f14.1e100.ne
+
+nslookup github.com:
+--------------------
+  Server: 127.0.0.53
+  Address: 127.0.0.53#53
+ Non-authoritative answer: 
+  Name: github.com
+  Address: 20.205.243.166
+
+nslookup openai.com:
+--------------------
+Non-authoritative answer:
+Name:	openai.com
+Address: 104.18.33.45
+Name:	openai.com
+Address: 172.64.154.211
+
+
+Key Learning:
+DNS acts like the internet's phonebook.
