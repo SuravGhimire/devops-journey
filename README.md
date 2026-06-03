@@ -44,6 +44,9 @@ Topics covered:
 
 - Day 1 : Networking , IP , Localhost
 - Day 2: Ports, HTTP, HTTPS, SSH
+- Day 3: DNS and How Websites Work
+
+---
 
 ## Upcoming Topics
 
