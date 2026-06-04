@@ -1,0 +1,34 @@
+Networking Day 4 : Network Debugging Tools
+
+Today I focus on:
+
+1.ping → check connectivity
+2.traceroute → track path of packets
+3.curl → test APIs / websites
+4.nslookup → DNS check (revision)
+5.dig → deep DNS inspection
+
+Tools Learned:
+-------------
+1. ping
+- Checks connectivity
+- Tests if a server is reachable
+
+2. traceroute
+- Shows path packets take
+- Helps identify network delays
+
+3. curl
+- Fetch data from URLs
+- Used for API testing
+
+4. nslookup
+- DNS lookup tool
+- Converts domain to IP
+
+5. dig
+- Advanced DNS tool
+- Provides detailed DNS information
+
+Key Learning:
+These tools/cmds help DevOps engineers debug network and server issues.
