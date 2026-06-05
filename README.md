@@ -46,6 +46,7 @@ Topics covered:
 - Day 2: Ports, HTTP, HTTPS, SSH
 - Day 3: DNS and How Websites Work
 - Day 4: Networking tools (ping, traceroute, curl, DNS tools)
+- Day 5: Client-Server Model
 
 ---
 
@@ -61,3 +62,4 @@ Topics covered:
 ## Goal
 
 To become a DevOps & Cloud Engineer through consistent hands-on learning and projects.
+
