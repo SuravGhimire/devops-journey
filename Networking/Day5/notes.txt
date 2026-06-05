@@ -1,0 +1,33 @@
+Networking Day 5 : Client-Server Model
+
+Client:
+- Requests data
+- Example: browser, curl
+
+Server:
+- Provides data
+- Example: websites, APIs
+
+Flow:
+Client → Request → Server → Response → Client
+
+Example:
+Browser opens github.com
+→ DNS lookup
+→ Connect to server
+→ Receive response
+
+Key Learning:
+Everything on the internet works on client-server communication.
+
+
+----------------------------------------------
+Why this matters (DevOps reality)
+----------------------------------
+Every system we build later uses this:
+
+AWS EC2 = server
+Browser = client
+Docker container = server
+Kubernetes pods = servers
+APIs = client-server communication
