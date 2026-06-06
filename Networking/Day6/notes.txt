@@ -1,0 +1,23 @@
+Networking Day 6 : Mini Web Server Lab
+
+Files:
+- index.html
+
+Commands:
+python3 -m http.server 8080
+curl http://localhost:8080
+ss -tuln | grep 8080
+
+Work Flow:
+Browser
+↓
+localhost:8080
+↓
+Python Web Server
+↓
+HTML Response
+
+Key Learning:
+-------------
+A client sends requests to a server through a port.
+The server processes the request and returns a response.
