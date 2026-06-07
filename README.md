@@ -48,6 +48,7 @@ Topics covered:
 - Day 4: Networking tools (ping, traceroute, curl, DNS tools)
 - Day 5: Client-Server Model
 - Day 6: Mini Web Server Lab
+- Day 7: Networking Revision and Troubleshooting
 
 ---
 
