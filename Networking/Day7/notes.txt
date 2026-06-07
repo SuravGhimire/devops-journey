@@ -1,0 +1,27 @@
+Networking Day 7 : Networking Revision and Troubleshooting
+
+Concepts Revised:
+- IP Address
+- Localhost
+- Ports
+- HTTP
+- HTTPS
+- SSH
+- DNS
+- Client-Server Model
+- Network Troubleshooting Tools
+
+Troubleshooting Steps:
+1. Check if service is running
+2. Verify listening port
+3. Test with curl
+4. Verify URL and port
+
+Commands Practiced:
+ss -tuln
+curl
+python3 -m http.server 9090
+
+Key Learning:
+Troubleshooting is a core DevOps skill.
+Always verify connectivity, DNS, ports, and services step by step.
