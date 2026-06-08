@@ -28,7 +28,7 @@ Topics covered:
 
 ---
 
-## Git & Github Progress
+## Week 2 - Git & Github Progress
 
 - Day 1 : How Git works
 - Day 2 : Branching and Collaboration
@@ -40,7 +40,7 @@ Topics covered:
 
 ---
 
-## Networking for Devops
+## Week 3 - Networking for Devops
 
 - Day 1 : Networking , IP , Localhost
 - Day 2: Ports, HTTP, HTTPS, SSH
