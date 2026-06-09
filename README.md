@@ -51,10 +51,14 @@ Topics covered:
 - Day 7: Networking Revision and Troubleshooting
 
 ---
+## AWS Fundamentals
+
+- Day 1: Cloud Computing, AWS Introduction, Regions and Availability Zones
+
+---
 
 ## Upcoming Topics
 
-- AWS
 - Docker
 - Kubernetes
 - CI/CD
