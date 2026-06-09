@@ -36,3 +36,25 @@ Launched:
 2006
 
 Most widely used cloud platform.
+
+
+----------------------------------------------------------------------------
+
+Core AWS Services:
+
+EC2:
+Virtual machine in the cloud
+
+S3:
+Object storage service
+
+IAM:
+Identity and Access Management
+
+VPC:
+Virtual Private Cloud
+
+RDS:
+Managed database service
+
+--------------------------------------------------------------------------------
