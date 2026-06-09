@@ -58,3 +58,23 @@ RDS:
 Managed database service
 
 --------------------------------------------------------------------------------
+
+
+AWS Global Infrastructure
+
+Region:
+Geographical location where AWS operates.
+
+Example:
+ap-south-1 (Mumbai)
+
+Availability Zone (AZ):
+Separate data centers inside a region.
+
+Example:
+ap-south-1a
+ap-south-1b
+ap-south-1c
+
+Benefit:
+High availability and fault tolerance.
