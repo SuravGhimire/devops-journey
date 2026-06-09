@@ -1,0 +1,38 @@
+AWS Day 1
+
+Topic:
+Introduction to Cloud Computing and AWS
+
+What is Cloud Computing?
+
+Cloud Computing means using computing resources
+(servers, storage, databases, networking)
+over the internet instead of owning physical hardware.
+
+Traditional Model:
+Buy server
+Maintain server
+Upgrade server
+
+Cloud Model:
+Rent resources when needed
+Pay only for usage
+
+Benefits:
+- Scalability
+- High Availability
+- Cost Efficiency
+- Global Access
+
+Major Cloud Providers:
+- AWS
+- Microsoft Azure
+- Google Cloud Platform (GCP)
+
+AWS:
+Amazon Web Services
+
+Launched:
+2006
+
+Most widely used cloud platform.
