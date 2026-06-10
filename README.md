@@ -54,6 +54,7 @@ Topics covered:
 ## AWS Fundamentals
 
 - Day 1: Cloud Computing, AWS Introduction, Regions and Availability Zones
+- Day 2: IAM, Users, Groups, Policies, Root User Best Practices
 
 ---
 
