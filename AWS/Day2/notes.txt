@@ -21,3 +21,15 @@ Security and access control in AWS.
 -----------------------------------------------------------------------------
 
 
+IAM User:
+Individual AWS account identity.
+
+IAM Group:
+Collection of users with similar permissions.
+
+IAM Policy:
+JSON document defining permissions.
+
+Best Practice:
+Assign permissions through groups.
+
