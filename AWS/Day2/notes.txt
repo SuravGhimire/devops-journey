@@ -1,0 +1,23 @@
+AWS Day 2
+
+Topic:
+IAM (Identity and Access Management)
+
+IAM is used to control:
+
+- Who can access AWS
+- What they can access
+- What actions they can perform
+
+IAM Components:
+
+1. User
+2. Group
+3. Policy
+
+Purpose:
+Security and access control in AWS.
+
+-----------------------------------------------------------------------------
+
+
