@@ -33,3 +33,20 @@ JSON document defining permissions.
 Best Practice:
 Assign permissions through groups.
 
+------------------------------------------------------------------------------------
+
+
+Root User:
+
+The account created when AWS account is opened.
+
+Characteristics:
+- Full access
+- Cannot be restricted
+
+Best Practice:
+Do not use root account daily.
+Create IAM users instead.
+
+
+--------------------------------------------------
