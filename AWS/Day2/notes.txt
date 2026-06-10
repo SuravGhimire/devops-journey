@@ -50,3 +50,16 @@ Create IAM users instead.
 
 
 --------------------------------------------------
+
+
+Day 2 Summary
+
+Learned:
+- IAM
+- Users
+- Groups
+- Policies
+- Root User Best Practices
+
+Key Learning:
+IAM is the foundation of AWS security.
