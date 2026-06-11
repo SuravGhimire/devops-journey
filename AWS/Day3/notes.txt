@@ -20,3 +20,24 @@ Think:
 EC2 = Cloud Server
 
 ----------------------------------------------------------
+
+EC2 Components
+
+AMI:
+Operating system template.
+
+Examples:
+- Ubuntu
+- Amazon Linux
+
+Instance Type:
+Defines CPU and RAM.
+
+Example:
+t2.micro
+
+Key Pair:
+Used for secure SSH login.
+
+-------------------------------------------------------------
+
