@@ -41,3 +41,18 @@ Used for secure SSH login.
 
 -------------------------------------------------------------
 
+Networking Concepts
+
+Public IP:
+Reachable from internet.
+
+Private IP:
+Used inside AWS network.
+
+Security Group:
+AWS firewall controlling traffic.
+
+Common Ports:
+22  SSH
+80  HTTP
+443 HTTPS
