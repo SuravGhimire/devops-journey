@@ -56,3 +56,18 @@ Common Ports:
 22  SSH
 80  HTTP
 443 HTTPS
+
+---------------------------------------------------------------
+Day 3 Summary
+
+Learned:
+- EC2
+- AMI
+- Instance Types
+- Key Pairs
+- Public IP
+- Private IP
+- Security Groups
+
+Key Learning:
+EC2 is a cloud server that combines Linux, networking and AWS concepts.
