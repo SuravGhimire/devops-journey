@@ -55,6 +55,7 @@ Topics covered:
 
 - Day 1: Cloud Computing, AWS Introduction, Regions and Availability Zones
 - Day 2: IAM, Users, Groups, Policies, Root User Best Practices
+- Day 3: EC2, AMI, Instance Types, Security Groups
 
 ---
 
