@@ -1,0 +1,22 @@
+AWS Day 3
+
+Topic:
+EC2 (Elastic Compute Cloud)
+
+EC2 is a virtual machine running in AWS.
+
+Uses:
+- Host websites
+- Run applications
+- Deploy APIs
+- Run databases
+
+Benefits:
+- Easy to create
+- Scalable
+- Pay only for usage
+
+Think:
+EC2 = Cloud Server
+
+----------------------------------------------------------
