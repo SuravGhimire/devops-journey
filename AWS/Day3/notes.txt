@@ -71,3 +71,30 @@ Learned:
 
 Key Learning:
 EC2 is a cloud server that combines Linux, networking and AWS concepts.
+
+--------------------------------------------------------------------------------------
+
+EC2 Launch Checklist
+
+Before launching an EC2 instance:
+
+1. Select an AMI
+   Example: Ubuntu 24.04 LTS
+
+2. Choose Instance Type
+   Example: t2.micro (Free Tier)
+
+3. Create or Select Key Pair
+   Used for SSH login
+
+4. Configure Security Group
+   Allow:
+   - SSH (Port 22)
+   - HTTP (Port 80) if hosting websites
+
+5. Launch Instance
+
+After Launch:
+- Get Public IP
+- Connect using SSH
+- Manage server remotely
