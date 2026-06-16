@@ -1,0 +1,17 @@
+AWS Day 4
+
+Topic:
+Launching First EC2 Instance
+
+Goal:
+Create an Ubuntu server in AWS and connect using SSH.
+
+Steps:
+1. Launch EC2
+2. Create Key Pair
+3. Configure Security Group
+4. Connect via SSH
+5. Run Linux commands
+
+----------------------------------------------------------------------------
+
