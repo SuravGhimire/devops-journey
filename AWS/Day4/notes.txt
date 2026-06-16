@@ -15,3 +15,14 @@ Steps:
 
 ----------------------------------------------------------------------------
 
+Key Pair
+
+Purpose:
+Secure SSH authentication.
+
+File:
+devops-key.pem
+
+Important:
+Keep the key safe.
+Without it SSH access may be lost.
