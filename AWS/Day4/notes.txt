@@ -26,3 +26,15 @@ devops-key.pem
 Important:
 Keep the key safe.
 Without it SSH access may be lost.
+
+--------------------------------------
+Connected to EC2 using SSH.
+
+Commands Tested:
+- whoami
+- hostname
+- pwd
+- uname -a
+
+Result:
+Successfully accessed AWS Ubuntu server remotely.
