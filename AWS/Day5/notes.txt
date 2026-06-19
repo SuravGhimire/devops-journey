@@ -1,0 +1,19 @@
+AWS Day 5
+---------
+
+Topic:
+AWS CLI
+
+AWS CLI (Command Line Interface) allows us to manage AWS services from the terminal.
+
+Benefits:
+- Automate AWS tasks
+- Script infrastructure
+- Used in CI/CD pipelines
+- Preferred by DevOps Engineers
+
+Command:
+aws --version
+
+Result:
+Verified AWS CLI installation.
