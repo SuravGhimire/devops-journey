@@ -58,6 +58,7 @@ Topics covered:
 - Day 3: EC2, AMI, Instance Types, Security Groups
   - Learned EC2 launch workflow and SSH preparation
 - Day 4: Launch EC2 Instance and Connect via SSH
+- Day 5: AWS CLI Installation and Basics
 
 ---
 
