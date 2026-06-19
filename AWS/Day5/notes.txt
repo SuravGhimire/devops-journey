@@ -17,3 +17,17 @@ aws --version
 
 Result:
 Verified AWS CLI installation.
+
+----------------------------------------------------------------
+AWS CLI Structure
+
+aws <service> <command>
+
+Examples:
+
+aws ec2
+aws s3
+aws iam
+aws configure
+
+The CLI allows automation instead of using the web console.
