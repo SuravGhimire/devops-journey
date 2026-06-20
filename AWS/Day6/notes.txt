@@ -39,3 +39,21 @@ I will use Floci.
 
 Floci emulates AWS services locally,
 allowing me to practice AWS without using the real cloud.
+
+--------------------------------------------------------------------------------
+How Floci Works
+
+AWS CLI
+      ↓
+localhost:4566
+      ↓
+Floci
+      ↓
+Docker
+      ↓
+Local AWS Services
+
+Instead of communicating with Amazon's cloud,
+AWS CLI communicates with a local AWS emulator.
+------------------------------------------------------------
+
