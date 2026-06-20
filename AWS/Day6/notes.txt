@@ -1,0 +1,20 @@
+AWS Day 6
+
+Topic:
+Local AWS using Floci
+
+Problem:
+No AWS account available.
+
+Solution:
+Use Floci to emulate AWS services locally.
+
+Benefits:
+- No AWS account required
+- No credit card required
+- Safe local environment
+- Good for AWS CLI practice
+
+Goal:
+Use AWS services locally before moving to the real AWS Cloud.
+
