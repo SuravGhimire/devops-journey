@@ -57,3 +57,17 @@ Instead of communicating with Amazon's cloud,
 AWS CLI communicates with a local AWS emulator.
 ------------------------------------------------------------
 
+AWS CLI Review
+
+AWS CLI already contains commands for AWS services.
+
+Examples:
+
+aws s3
+aws ec2
+aws iam
+
+Normally these connect to AWS Cloud.
+
+Using Floci,
+the same commands will connect to the local AWS emulator.
