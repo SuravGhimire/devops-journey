@@ -18,3 +18,24 @@ Benefits:
 Goal:
 Use AWS services locally before moving to the real AWS Cloud.
 
+
+----------------------------------------------------------------------------
+
+Why Floci?
+
+Normally:
+
+AWS CLI
+      ↓
+AWS Cloud
+
+requires:
+- AWS Account
+- Internet
+- Billing Account
+
+Since I don't have an AWS account,
+I will use Floci.
+
+Floci emulates AWS services locally,
+allowing me to practice AWS without using the real cloud.
