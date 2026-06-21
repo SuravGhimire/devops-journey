@@ -54,3 +54,74 @@ S3
 │      ├── notes.pdf
 │      └── video.mp4
 
+-----------------------------------------------------------------
+Storage Classes:
+
+1. Standard
+- Frequently accessed data
+
+2. Intelligent-Tiering
+- Automatically moves data between tiers
+
+3. Standard-IA
+- Infrequently accessed data
+
+4. Glacier Instant Retrieval
+- Archive with quick access
+
+5. Glacier Flexible Retrieval
+- Long-term archive
+
+6. Glacier Deep Archive
+- Cheapest storage
+- Retrieval may take hours
+
+Choose the storage class based on how often the data is accessed.
+
+--------------------------------------------------------------
+
+Common Uses:
+
+- Website image storage
+- Static website hosting
+- Backup storage
+- Log storage
+- Software downloads
+- Media files
+- Data archiving
+
+-------------------------------------
+
+S3 Security
+
+Access is controlled using:
+
+- IAM Policies
+- Bucket Policies
+- ACL (Access Control Lists)
+
+By default, S3 buckets are private.
+
+Public access should only be enabled when required.
+
+----------------------------------------------------------
+
+Lifecycle Rules
+
+Lifecycle rules automatically move or delete objects.
+
+Example:
+
+30 days
+↓
+Move to Standard-IA
+
+90 days
+↓
+Move to Glacier
+
+365 days
+↓
+Delete
+
+This helps reduce storage costs.
