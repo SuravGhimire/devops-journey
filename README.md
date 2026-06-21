@@ -60,6 +60,7 @@ Topics covered:
 - Day 4: Launch EC2 Instance and Connect via SSH
 - Day 5: AWS CLI Installation and Basics
 - Day 6 : Local AWS Environment (Floci) Preparation
+- Day 7 : Amazon S3 Fundamentals
 
 ---
 
