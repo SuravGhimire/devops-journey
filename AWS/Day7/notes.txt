@@ -1,0 +1,16 @@
+AWS Day 7
+
+Topic:
+Amazon S3 (Simple Storage Service)
+
+Amazon S3 is AWS's object storage service.
+
+It is used to store:
+- Images
+- Videos
+- Documents
+- Backups
+- Application files
+- Static websites
+
+S3 is highly durable, scalable, and available from anywhere over the internet.
