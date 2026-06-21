@@ -14,3 +14,43 @@ It is used to store:
 - Static websites
 
 S3 is highly durable, scalable, and available from anywhere over the internet.
+
+--------------------------------------------------------------------------------
+
+Bucket:
+------
+A bucket is like a folder that stores files.
+
+Examples:
+company-backup
+project-images
+my-static-website
+
+Bucket names must be globally unique.
+
+
+Object:
+---------
+An object is the actual file stored inside a bucket.
+
+Example:
+
+Bucket:
+my-images
+
+Objects:
+cat.jpg
+resume.pdf
+logo.png
+
+Everything stored inside S3 is called an object.
+
+> File/FlowDiagram of S3:
+S3
+│
+├── Bucket
+│      │
+│      ├── photo.jpg
+│      ├── notes.pdf
+│      └── video.mp4
+
