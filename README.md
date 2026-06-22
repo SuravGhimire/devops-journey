@@ -61,6 +61,7 @@ Topics covered:
 - Day 5: AWS CLI Installation and Basics
 - Day 6 : Local AWS Environment (Floci) Preparation
 - Day 7 : Amazon S3 Fundamentals
+- Day 8 : Amazon VPC Fundamentals
 
 ---
 
