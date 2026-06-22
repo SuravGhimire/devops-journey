@@ -19,3 +19,111 @@ A VPC provides:
 
 --------------------------------------------------------
 
+Main Components
+
+1. VPC
+The private network.
+
+2. Subnet
+A smaller network inside a VPC.
+
+3. Internet Gateway
+Allows internet access.
+
+4. Route Table
+Controls where network traffic goes.
+
+5. Security Group
+Acts as a firewall for EC2 instances.
+
+6. Network ACL
+Firewall at the subnet level.
+
+
+- Lets breakdown VPC into picture form:
+
+AWS
+│
+└── VPC
+     │
+     ├── Public Subnet
+     │      └── EC2 (Web Server)
+     │
+     └── Private Subnet
+            └── Database
+---------------------------------------------
+
+-Public vs Private Subnet :
+
+Public Subnet:
+
+- Has internet access
+- Used for:
+  - Web Servers
+  - Bastion Hosts
+  - Load Balancers
+(Public = Users can reach it.)
+
+Private Subnet:
+
+- No direct internet access
+- Used for:
+  - Databases
+  - Backend Servers
+  - Internal Applications
+(Private = Only internal AWS resources can reach it.)
+
+----------------------------------
+
+Internet Gateway:
+
+An Internet Gateway connects a VPC to the internet.
+
+Without an Internet Gateway, resources inside a VPC cannot communicate with the internet.
+
+Example:
+
+Laptop
+   ↓
+Internet
+   ↓
+Internet Gateway
+   ↓
+  VPC
+
+-----------------------------
+
+Route Table:
+
+A Route Table decides where network traffic goes.
+
+Example:
+
+Destination        Target
+
+0.0.0.0/0          Internet Gateway
+
+-This route allows internet traffic.
+
+--------------------------------------------------
+
+CIDR Block:
+
+A CIDR block defines the IP address range of a VPC.
+
+Example:
+----------
+10.0.0.0/16
+
+-This means the VPC can contain many private IP addresses.
+
+AWS commonly uses:
+
+10.0.0.0/16
+172.16.0.0/16
+192.168.0.0/16
+
+
+----------------------------------------------------
+
+
