@@ -1,0 +1,21 @@
+AWS Day 8
+
+
+Topic:
+Amazon VPC (Virtual Private Cloud):
+
+-A VPC is a virtual network inside AWS.
+
+-It allows us to launch AWS resources in our own isolated network.
+
+A VPC provides:
+- Private network
+- IP address range
+- Routing
+- Security
+- Internet connectivity
+
+-Every EC2 instance is launched inside a VPC.
+
+--------------------------------------------------------
+
