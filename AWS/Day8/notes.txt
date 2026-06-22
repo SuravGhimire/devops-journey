@@ -127,3 +127,35 @@ AWS commonly uses:
 ----------------------------------------------------
 
 
+Example Architecture
+
+Internet
+    │
+Internet Gateway
+    │
+-------------------------
+|        VPC            |
+|                       |
+| Public Subnet         |
+|  └── EC2 Web Server   |
+|                       |
+| Private Subnet        |
+|  └── Database         |
+-------------------------
+
+-Users access only the web server.
+
+-The database stays protected inside the private subnet.
+
+
+-----------------------------------------------------------------
+
+Benefits of VPC
+
+- Network isolation
+- Better security
+- Flexible IP management
+- Public and private resources
+- Full control over networking
+
+
