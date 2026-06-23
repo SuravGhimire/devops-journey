@@ -62,7 +62,7 @@ Topics covered:
 - Day 6 : Local AWS Environment (Floci) Preparation
 - Day 7 : Amazon S3 Fundamentals
 - Day 8 : Amazon VPC Fundamentals
-
+- Day 9 : Security Groups & Network ACLs
 ---
 
 ## Upcoming Topics
