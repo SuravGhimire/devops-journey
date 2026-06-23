@@ -1,0 +1,20 @@
+AWS Day 9
+
+
+Topic:
+Security Groups & Network ACLs
+
+
+Security Group:
+---------------
+-A Security Group acts as a virtual firewall for an EC2 instance.
+
+It controls:
+- Incoming traffic (Inbound)
+- Outgoing traffic (Outbound)
+
+-Every EC2 instance must have at least one Security Group.
+
+------------------------------------------------------------------
+
+
