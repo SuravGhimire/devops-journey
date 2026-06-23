@@ -17,4 +17,71 @@ It controls:
 
 ------------------------------------------------------------------
 
+Inbound Rules
+
+Control traffic coming INTO the EC2 instance.
+
+Examples:
+
+SSH
+Port 22
+
+HTTP
+Port 80
+
+HTTPS
+Port 443
+
+--------------------------------
+
+Outbound Rules
+
+Control traffic leaving the EC2 instance.
+
+Example:
+
+EC2
+↓
+Internet
+
+Most AWS Security Groups allow all outbound traffic by default.
+
+-----------------------------------------------------------------
+
+Common Ports
+
+22   SSH
+
+80   HTTP
+
+443  HTTPS
+
+3306 MySQL
+
+5432 PostgreSQL
+
+8080 Web Applications
+---------------------
+
+Example
+
+Web Server
+
+Inbound
+
+HTTP 80
+Source:
+0.0.0.0/0
+
+HTTPS 443
+Source:
+0.0.0.0/0
+
+SSH 22
+Source:
+My Public IP
+
+This allows everyone to access the website,
+but only I can SSH into the server.
+
 
