@@ -85,3 +85,87 @@ This allows everyone to access the website,
 but only I can SSH into the server.
 
 
+------------------------------------------------
+
+Network ACL (Access Control List)
+
+A Network ACL protects an entire subnet.
+
+Unlike Security Groups,
+Network ACLs work at the subnet level.
+
+Security Group
+↓
+Protects an EC2 Instance
+
+Network ACL
+↓
+Protects the entire Subnet
+
+
+------------------------------
+
+Security Group:
+
+- Instance Level
+- Stateful
+- Only Allow Rules
+
+Network ACL:
+
+- Subnet Level
+- Stateless
+- Allow and Deny Rules
+
+-----------------------
+
+Stateful:
+
+If inbound traffic is allowed,
+the response is automatically allowed.
+
+Example:
+
+Laptop
+↓
+SSH
+↓
+EC2
+↓
+Reply automatically allowed.
+
+
+Stateless:
+
+Both inbound and outbound
+rules must be configured separately.
+
+------------------------------------------
+
+Internet
+      │
+      ↓
+Security Group
+      │
+      ↓
+EC2 Web Server
+      │
+-----------------------
+Subnet
+Protected by
+Network ACL
+-----------------------
+
+
+
+--------------------------------------------
+
+Best Practices
+
+- Allow only required ports.
+- Never allow SSH from everyone.
+- Use your public IP for SSH access.
+- Keep Security Groups simple.
+- Use Network ACLs for extra protection.
+
+
