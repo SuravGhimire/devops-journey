@@ -1,0 +1,19 @@
+AWS Day 10
+
+Topic:
+Elastic Load Balancer (ELB):
+
+Problem:
+------
+-Imagine a website running on one EC2 instance.
+
+Users
+  ↓
+EC2
+
+-If the EC2 instance crashes,the website becomes unavailable.
+
+-If too many users visit,the server becomes overloaded.
+
+Solution:
+Use a Load Balancer.
