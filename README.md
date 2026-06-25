@@ -63,6 +63,7 @@ Topics covered:
 - Day 7 : Amazon S3 Fundamentals
 - Day 8 : Amazon VPC Fundamentals
 - Day 9 : Security Groups & Network ACLs
+- Day 10 : Elastic Load Balancer (ELB) & Auto Scaling
 ---
 
 ## Upcoming Topics
