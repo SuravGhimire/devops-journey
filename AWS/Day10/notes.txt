@@ -17,3 +17,54 @@ EC2
 
 Solution:
 Use a Load Balancer.
+
+--------------------------------------------
+
+Elastic Load Balancer
+
+An ELB distributes traffic across multiple servers.
+
+Example:
+
+Users
+   ↓
+Load Balancer
+   ↓
+----------------
+|      |       |
+EC2    EC2    EC2
+
+Benefits:
+
+-High Availability
+-Fault Tolerance
+-Better Performance
+-Scalability
+
+------------------------
+
+Types of ELB
+
+1. Application Load Balancer (ALB)
+
+- Works at Layer 7
+- HTTP / HTTPS traffic
+- Most commonly used
+
+--------------------------------
+
+2. Network Load Balancer (NLB)
+
+- Works at Layer 4
+- TCP / UDP traffic
+- Very high performance
+
+--------------------------------
+
+3. Gateway Load Balancer
+
+- Used for security appliances
+- Advanced networking
+
+(Layer 7 = HTTP / HTTPS & Layer 4 = TCP / UDP)
+
