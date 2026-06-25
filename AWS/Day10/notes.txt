@@ -68,3 +68,65 @@ Types of ELB
 
 (Layer 7 = HTTP / HTTPS & Layer 4 = TCP / UDP)
 
+
+----------------------------------------------------------
+
+Auto Scaling
+
+Auto Scaling automatically adjusts the number of EC2 instances.
+
+Example:
+
+Low Traffic
+↓
+1 EC2 Instance
+
+High Traffic
+↓
+5 EC2 Instances
+
+Traffic Drops
+↓
+Back to 1 EC2 Instance
+
+Benefits
+
+- Cost Optimization
+- High Availability
+- Better Performance
+- Automatic Scaling
+
+--------------------------------------------
+
+(ELB + Auto Scaling)
+Real World Setup
+
+Users
+   ↓
+Load Balancer
+   ↓
+----------------
+|      |      |
+EC2    EC2    EC2
+----------------
+       ↑
+ Auto Scaling Group
+
+When traffic increases, new EC2 instances are created automatically.
+
+
+--------------------------------------------------------------------------
+
+High Availability
+
+Deploy resources in multiple Availability Zones.
+
+AZ-A
+ EC2
+
+AZ-B
+ EC2
+
+Load Balancer
+
+If one AZ fails, traffic is sent to healthy instances.
