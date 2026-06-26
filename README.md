@@ -64,6 +64,8 @@ Topics covered:
 - Day 8 : Amazon VPC Fundamentals
 - Day 9 : Security Groups & Network ACLs
 - Day 10 : Elastic Load Balancer (ELB) & Auto Scaling
+- Day 11 : Amazon RDS (Relational Database Service)
+
 ---
 
 ## Upcoming Topics
