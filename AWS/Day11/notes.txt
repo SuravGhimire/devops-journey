@@ -15,4 +15,55 @@ Benefits:
 
 --------------------------------------------
 
+Why RDS?
+
+Without RDS:
+------------
+Install Linux
+↓
+Install MySQL
+↓
+Configure database
+↓
+Manage backups
+↓
+Apply security updates
+
+--------------------------------
+
+With RDS:
+---------
+Create RDS Instance
+↓
+AWS manages everything
+
+
+---------------------------------------------
+
+Amazon RDS supports:
+
+- MySQL
+- PostgreSQL
+- MariaDB
+- Oracle
+- Microsoft SQL Server
+
+Choose the engine based on your application requirements.
+
+--------------------------------------------------------------
+
+(Multi-AZ Deployment):
+
+Multi-AZ:
+---------
+Primary Database
+        │
+Automatic Replication
+        │
+Standby Database
+
+If the primary database fails, AWS automatically switches to the standby database.
+
+Benefit:
+High Availability
 
