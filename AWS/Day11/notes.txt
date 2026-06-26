@@ -1,0 +1,18 @@
+AWS Day 11
+
+Topic:
+Amazon RDS (Relational Database Service):
+
+-Amazon RDS is a managed database service provided by AWS.
+-Instead of installing and managing a database server yourself, AWS manages it for you.
+
+Benefits:
+- Easy setup
+- Automatic backups
+- Software updates
+- High availability
+- Monitoring
+
+--------------------------------------------
+
+
