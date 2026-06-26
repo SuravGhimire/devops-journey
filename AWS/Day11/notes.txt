@@ -67,3 +67,54 @@ If the primary database fails, AWS automatically switches to the standby databas
 Benefit:
 High Availability
 
+
+----------------------------------------------
+
+Read Replica
+
+Primary Database
+      │
+Replication
+      │
+Read Replica
+
+Purpose:
+Handle read-heavy workloads.
+
+Applications can read data from replicas , while writes continue to the primary database.
+
+-----------------------------------
+
+Automatic Backups:
+- Enabled by AWS
+- Used for point-in-time recovery
+
+Snapshots:
+- Manual backups
+- Created by the user
+- Can be restored later
+
+--------------------------
+
+
+Best Practices
+
+- Enable automatic backups
+- Use Multi-AZ for production
+- Use Read Replicas for scaling reads
+- Restrict database access using Security Groups
+- Never expose a production database directly to the internet
+
+--------------------------------------
+
+Real-world Architecture :
+
+Internet
+    ▼
+Load Balancer
+    ▼
+EC2 Application Server
+    ▼
+Amazon RDS
+
+
