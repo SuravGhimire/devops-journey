@@ -72,3 +72,51 @@ Possible actions:
 - Send Email
 - Trigger Auto Scaling
 - Invoke Lambda
+
+
+---------------------------------
+
+CloudWatch Dashboards:
+
+A dashboard provides a visual view of AWS resources.
+
+We can monitor:
+
+- EC2
+- RDS
+- Load Balancer
+- S3
+- Lambda
+
+Everything is displayed in one place.
+
+
+-------------------------------------------------------------
+
+Why DevOps Engineers Use CloudWatch ?
+(Why CloudWatch?)
+
+- Detect server problems
+- Monitor application health
+- Analyze logs
+- Receive alerts
+- Improve reliability
+
+
+--------------------------
+
+(Real-world Example)
+
+Example:
+
+User visits website
+↓
+EC2 CPU becomes 90%
+↓
+CloudWatch detects high CPU
+↓
+Alarm triggers
+↓
+Auto Scaling launches another EC2 instance
+↓
+Website remains responsive
