@@ -1,0 +1,21 @@
+AWS Day 12
+
+Topic:
+Amazon CloudWatch :
+
+-Amazon CloudWatch is AWS's monitoring and observability service.
+-It collects information about AWS resources and applications.
+
+CloudWatch helps us:
+- Monitor resources
+- View performance
+- Collect logs
+- Create alarms
+- Troubleshoot problems
+
+* Analogy  (CloudWatch):
+ 
+- A car's dashboard shows your speed, fuel level, and engine temperature in real time. 
+CloudWatch does the exact same thing for your cloud apps, tracking metrics like CPU usage, memory, and network traffic.
+
+---------------------------------------------------------------------
