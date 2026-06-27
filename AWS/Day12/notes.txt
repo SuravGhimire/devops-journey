@@ -19,3 +19,56 @@ CloudWatch helps us:
 CloudWatch does the exact same thing for your cloud apps, tracking metrics like CPU usage, memory, and network traffic.
 
 ---------------------------------------------------------------------
+
+Metrics :
+
+A metric is a measurable value.
+
+Examples:
+
+-EC2 CPU Utilization
+-Memory Usage
+-Disk Read/Write
+-Network In
+-Network Out
+
+* Metrics help determine whether a resource is healthy.
+
+--------------------------------------------
+
+CloudWatch Logs:
+
+Applications generate logs.
+
+Examples:
+-Application Logs
+-System Logs
+-Web Server Logs
+
+CloudWatch stores these logs and makes them searchable.
+
+Benefits:
+- Debugging
+- Error tracking
+- Security auditing
+
+
+----------------------------------------
+
+CloudWatch Alarms:
+
+CloudWatch continuously checks metrics.
+
+Example:
+
+CPU > 80%
+↓
+Alarm Triggered
+↓
+Notification Sent
+
+
+Possible actions:
+- Send Email
+- Trigger Auto Scaling
+- Invoke Lambda
