@@ -1,0 +1,19 @@
+AWS Day 13
+
+Topic:
+Amazon Route 53:
+
+-Amazon Route 53 is AWS's Domain Name System (DNS) service.
+-It translates domain names into IP addresses.
+
+Example:
+
+www.example.com
+↓
+192.168.1.10
+
+Instead of remembering IP addresses, users access websites using domain names.
+
+----------------------------------------------------
+
+
