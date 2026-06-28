@@ -66,6 +66,7 @@ Topics covered:
 - Day 10 : Elastic Load Balancer (ELB) & Auto Scaling
 - Day 11 : Amazon RDS (Relational Database Service)
 - Day 12 : Amazon CloudWatch
+- Day 13 : Amazon Route 53 (DNS)
 
 ---
 
