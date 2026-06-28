@@ -67,3 +67,55 @@ Specifies the mail server for a domain.
 
 NS Record:
 Specifies the authoritative name servers.
+
+
+-----------------------------------------------------
+
+Routing Policies:
+----------------
+Simple Routing:
+One resource.
+
+Weighted Routing:
+Traffic distributed based on percentages.
+
+Latency Routing:
+Routes users to the region with the lowest latency.
+
+Failover Routing:
+Routes traffic to a backup resource if the primary fails.
+
+Geolocation Routing:
+Routes users based on geographic location.
+
+
+--------------------------------------------------------------
+
+(Why Route 53)
+Benefits
+
+- Highly available
+- Scalable
+- Fast DNS resolution
+- Health checks
+- Supports multiple routing policies
+
+
+--------------------------------------
+
+(Real-World Architecture )
+
+User
+↓
+www.myapp.com
+↓
+Amazon Route 53
+↓
+Application Load Balancer
+↓
+EC2 Instances
+↓
+Amazon RDS
+
+
+{Route 53 sits at the very beginning of the request flow.}
