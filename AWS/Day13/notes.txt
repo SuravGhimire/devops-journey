@@ -17,3 +17,53 @@ Instead of remembering IP addresses, users access websites using domain names.
 ----------------------------------------------------
 
 
+(How DNS Works)
+DNS Resolution
+
+User enters:
+-----------
+www.example.com
+↓
+DNS Query
+↓
+Route 53
+↓
+Returns IP Address
+↓
+Browser connects to server
+
+-----------------------------------------------------------
+
+Hosted Zone
+
+A Hosted Zone stores DNS records for a domain.
+
+Example:
+example.com
+
+Records:
+-A Record
+-AAAA Record
+-CNAME
+-MX
+-NS
+
+
+----------------------------------------------
+
+DNS Record Types:
+
+A Record:
+Maps a domain to an IPv4 address.
+
+AAAA Record:
+Maps a domain to an IPv6 address.
+
+CNAME:
+Creates an alias to another domain.
+
+MX Record:
+Specifies the mail server for a domain.
+
+NS Record:
+Specifies the authoritative name servers.
