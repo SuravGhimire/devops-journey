@@ -52,3 +52,87 @@ Benefits:
 
 - Better account protection
 - Reduces unauthorized access
+
+
+---------------------------------------------------------
+
+AWS Well-Architected Framework
+
+The AWS Well-Architected Framework provides best practices for designing secure, reliable, efficient and cost-effective systems.
+
+-----------------------------
+
+Six Pillars:
+
+1. Operational Excellence
+Improve and automate operations.
+
+--------------------------------
+
+2. Security
+Protect systems and data.
+
+--------------------------------
+
+3. Reliability
+Recover quickly from failures.
+
+--------------------------------
+
+4. Performance Efficiency
+Use resources efficiently.
+
+--------------------------------
+
+5. Cost Optimization
+Avoid unnecessary expenses.
+
+--------------------------------
+
+6. Sustainability
+Reduce environmental impact
+through efficient resource usage.
+
+
+
+--------------------------------------------------
+(Real WOrld Example)
+
+Example Architecture
+
+User
+
+↓
+
+Route 53
+
+↓
+
+Application Load Balancer
+
+↓
+
+EC2 Auto Scaling Group
+
+↓
+
+Amazon RDS
+
+↓
+
+CloudWatch Monitoring
+
+↓
+
+IAM controls access
+
+-This architecture follows AWS best practices for security, reliability and scalability.
+
+---------------------------------------------------
+
+Key Takeaways:
+- Never use the Root account daily.
+- Enable MFA.
+- Follow the Principle of Least Privilege.
+- Design systems using AWS Well-Architected principles.
+- Security and reliability should always be considered from the beginning.
