@@ -67,7 +67,7 @@ Topics covered:
 - Day 11 : Amazon RDS (Relational Database Service)
 - Day 12 : Amazon CloudWatch
 - Day 13 : Amazon Route 53 (DNS)
-
+- Day 14 : IAM Best Practices & AWS Well-Architected Framework
 ---
 
 ## Upcoming Topics
