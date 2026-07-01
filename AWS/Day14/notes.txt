@@ -1,0 +1,18 @@
+AWS Day 14
+
+Topic:
+IAM Best Practices
+
+1. Do not use the Root User for daily work.
+
+2. Create IAM Users for each person.
+
+3. Grant only the required permissions.
+
+4. Use IAM Groups to manage permissions.
+
+5. Rotate credentials regularly.
+
+6. Enable Multi-Factor Authentication (MFA).
+
+
