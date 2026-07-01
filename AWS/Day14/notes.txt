@@ -16,3 +16,39 @@ IAM Best Practices
 6. Enable Multi-Factor Authentication (MFA).
 
 
+----------------------------------------------------
+
+Principle of Least Privilege:
+A user should receive only the permissions required to perform their job.
+
+Example:
+
+Developer
+
+✓ Launch EC2
+✓ View Logs
+
+✗ Delete VPC
+✗ Delete IAM Users
+
+-This improves security.
+
+--------------------------------------------------
+
+Multi-Factor Authentication (MFA):
+-MFA adds an extra layer of security.
+
+Instead of only:
+
+-Password
+
+Users must also provide:
+
+- Authenticator App Code
+or
+- Hardware Security Key
+
+Benefits:
+
+- Better account protection
+- Reduces unauthorized access
