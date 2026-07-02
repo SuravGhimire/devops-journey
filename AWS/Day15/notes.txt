@@ -28,3 +28,80 @@ Other AWS Services:
 - Auto Scaling adds/removes EC2 instances.
 - Amazon S3 stores files and backups.
 
+
+---------------------------------------------------
+
+{Request Flow}
+
+How a User Request Travels:
+
+1. User enters:
+
+www.myapp.com
+↓
+2. Route 53 resolves the domain name.
+↓
+3. Traffic reaches the Load Balancer.
+↓
+4. Load Balancer forwards traffic to a healthy EC2 instance.
+↓
+5. EC2 processes the request.
+↓
+6. If data is needed,EC2 communicates with Amazon RDS.
+↓
+7. Response is sent back to the user.
+
+
+------------------------------------------------------------
+
+(Role of Each Service)
+
+AWS Services Summary:
+
+IAM
+Controls access to AWS resources.
+
+--------------------------------
+
+EC2
+Runs the application.
+
+--------------------------------
+
+Security Groups
+Act as virtual firewalls.
+
+--------------------------------
+
+VPC
+Provides an isolated network.
+
+--------------------------------
+
+S3
+Stores files and backups.
+
+--------------------------------
+
+Route 53
+Resolves domain names.
+
+--------------------------------
+
+Load Balancer
+Distributes traffic.
+
+--------------------------------
+
+Auto Scaling
+Automatically adjusts EC2 instances.
+
+--------------------------------
+
+CloudWatch
+Monitors applications and resources.
+
+--------------------------------
+
+RDS
+Provides a managed relational database.
