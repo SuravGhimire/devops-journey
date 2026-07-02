@@ -1,0 +1,30 @@
+AWS Day 15
+
+Topic:
+
+Complete AWS Architecture:
+
+                Internet
+                    │
+                    ▼
+             Amazon Route 53
+                    │
+                    ▼
+      Application Load Balancer
+                    │
+        ┌───────────┴───────────┐
+        ▼                       ▼
+     EC2 Instance          EC2 Instance
+        │                       │
+        └───────────┬───────────┘
+                    ▼
+              Amazon RDS
+
+Other AWS Services:
+
+- IAM manages user permissions.
+- Security Groups protect resources.
+- CloudWatch monitors the application.
+- Auto Scaling adds/removes EC2 instances.
+- Amazon S3 stores files and backups.
+
