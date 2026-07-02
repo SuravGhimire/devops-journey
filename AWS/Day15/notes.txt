@@ -105,3 +105,39 @@ Monitors applications and resources.
 
 RDS
 Provides a managed relational database.
+
+----------------------------------------------------------------------
+
+Best Practices:
+
+- Never use the Root account for daily work.
+- Enable MFA.
+- Follow the Principle of Least Privilege.
+- Use Security Groups to restrict access.
+- Keep databases private.
+- Enable CloudWatch monitoring.
+- Use Auto Scaling for high traffic.
+- Store static files in S3.
+- Deploy across multiple Availability Zones.
+
+
+----------------------------------------------------------------------
+
+AWS Foundation Complete :
+
+Learned Services:
+
+✓ IAM
+✓ EC2
+✓ AWS CLI
+✓ S3
+✓ VPC
+✓ Security Groups
+✓ Network ACLs
+✓ Elastic Load Balancer
+✓ Auto Scaling
+✓ Amazon RDS
+✓ CloudWatch
+✓ Route 53
+
+These services form the foundation for deploying secure, scalable and highly available applications on AWS.
