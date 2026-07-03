@@ -1,0 +1,36 @@
+AWS Day 16
+
+Topic:
+Local AWS using Floci
+
+Objective:
+Set up a local AWS environment and practice Amazon S3 using the AWS CLI.
+
+Tasks Completed:
+- Installed Docker
+- Installed Floci
+- Started Floci
+- Configured AWS endpoint
+- Created first S3 bucket
+- Uploaded a file
+- Listed bucket contents
+- Downloaded a file
+
+Commands Used:
+
+floci doctor
+
+floci start --pull always
+
+export AWS_ENDPOINT_URL=http://localhost.floci.io:4566
+
+-aws s3 mb s3://my-first-local-bucket
+
+-aws s3 ls
+
+-aws s3 cp hello.txt s3://my-first-local-bucket/
+
+-aws s3 cp s3://my-first-local-bucket/hello.txt download/
+
+Result:
+Successfully created and managed an Amazon S3 bucket in a local AWS environment using the AWS CLI.
