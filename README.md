@@ -69,6 +69,9 @@ Topics covered:
 - Day 13 : Amazon Route 53 (DNS)
 - Day 14 : IAM Best Practices & AWS Well-Architected Framework
 - Day 15 : Complete AWS Architecture & AWS Foundation Wrap-up
+
+- Day 16 : AWS local S3 practice
+
 ---
 
 ## Upcoming Topics
