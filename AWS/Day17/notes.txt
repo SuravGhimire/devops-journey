@@ -54,7 +54,7 @@ aws s3 ls
 
 Shows all available S3 buckets.
 
-------------------------------------------------------------
+-------------------------------------------------------
 
 2. Create Bucket
 
@@ -62,7 +62,7 @@ aws s3 mb s3://devops-day17-bucket
 
 Creates a new S3 bucket.
 
-------------------------------------------------------------
+---------------------------------------------------------
 
 3. Upload File
 
@@ -78,7 +78,7 @@ aws s3 ls s3://devops-day17-bucket
 
 Lists all files inside the bucket.
 
-------------------------------------------------------------
+---------------------------------------------
 
 5. Copy Object
 
@@ -94,10 +94,25 @@ aws s3 cp s3://devops-day17-bucket/file2.txt downloads/
 
 Downloads an object from S3.
 
-------------------------------------------------------------
+------------------------------------------------------
 
 7. Delete Object
 
 aws s3 rm s3://devops-day17-bucket/file1-copy.txt
 
 Deletes an object from the bucket.
+
+----------------------------------
+
+
+Summary
+
+Today I learned how to:
+- Create an S3 bucket
+- Upload files
+- List bucket contents
+- Copy objects
+- Download objects
+- Delete objects
+
+These are the basic day-to-day operations performed on Amazon S3 using the AWS CLI.
