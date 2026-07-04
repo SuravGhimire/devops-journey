@@ -1,0 +1,24 @@
+AWS Day 17
+
+Topic:
+Amazon S3 Object Management using AWS CLI
+
+Objective:
+Learn how to manage files (objects) inside an S3 bucket using AWS CLI.
+
+---------------------------------------------------------------------
+
+What is an S3 Object?
+
+An object is a file stored inside an S3 bucket.
+
+Examples:
+- image.jpg
+- notes.txt
+- video.mp4
+- backup.zip
+
+Every object has:
+- Data (the file)
+- Key (file name/path)
+- Metadata (information about the file)
