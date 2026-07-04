@@ -71,7 +71,7 @@ Topics covered:
 - Day 15 : Complete AWS Architecture & AWS Foundation Wrap-up
 
 - Day 16 : AWS local S3 practice
-
+- Day 17 : AWS S3 object management practice
 ---
 
 ## Upcoming Topics
