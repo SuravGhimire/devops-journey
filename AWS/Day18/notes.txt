@@ -9,4 +9,109 @@ Objectives:
 - Synchronize local files
 - Delete objects recursively
 
+(Learn how to manage folders and multiple files in Amazon S3 using the AWS CLI.)
 --------------------------------------
+
+What is Folder Management in S3?
+
+-Amazon S3 does not actually have folders.
+-Folders are represented by object key prefixes.
+
+Example:
+-------
+Bucket:
+day18-bucket
+
+Objects:
+website/index.html
+website/about.html
+website/images/logo.txt
+
+Here,
+website/ and images/ are prefixes that appear as folders.
+
+---------------------------------------------------------------------
+
+What is Synchronization?
+
+-Synchronization means making two locations contain the same files.
+-The AWS CLI compares the source and destination and copies only the files that have changed.
+-This makes synchronization much faster than uploading everything again.
+
+---------------------------------------------------------------------
+
+Commands Practiced:
+
+1. Create Bucket
+
+aws s3 mb s3://day18-bucket
+
+-Creates a new S3 bucket.
+
+------------------------------------------------------------
+
+2. Upload Entire Folder
+
+aws s3 cp website s3://day18-bucket/website --recursive
+
+Uploads all files and subfolders.
+
+------------------------------------------------------------
+
+3. List All Objects
+
+aws s3 ls s3://day18-bucket --recursive
+
+Displays every object inside the bucket.
+
+------------------------------------------------------------
+
+4. Download Entire Folder
+
+aws s3 cp s3://day18-bucket/website downloaded --recursive
+
+Downloads the complete directory.
+
+------------------------------------------------------------
+
+5. Synchronize Files
+
+aws s3 sync website s3://day18-bucket/website
+
+Uploads only new or modified files.
+
+------------------------------------------------------------
+
+6. Delete Folder Recursively
+
+aws s3 rm s3://day18-bucket/website --recursive
+
+Deletes all objects inside the specified folder.
+
+---------------------------------------------------------------------
+
+Difference Between cp and sync
+
+aws s3 cp :
+- Copies all selected files.
+- Best for one-time uploads.
+
+aws s3 sync :
+- Copies only changed files.
+- Faster and commonly used for deployments and backups.
+
+---------------------------------------------------------------------
+
+Real World Uses
+
+- Deploying static websites
+- Uploading project assets
+- Backing up application files
+- Synchronizing build artifacts
+- CI/CD deployment automation
+
+---------------------------------------------------------------------
+
+Summary
+
+Today I learned how to manage directories in Amazon S3 using the AWS CLI. I practiced uploading folders, downloading folders, synchronizing changes, and deleting objects recursively. These commands are widely used in real-world cloud and DevOps workflows.
