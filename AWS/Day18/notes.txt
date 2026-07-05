@@ -1,0 +1,12 @@
+AWS Day 18
+
+Topic:
+Amazon S3 Folder Management and Synchronization
+
+Objectives:
+- Upload directories
+- Download directories
+- Synchronize local files
+- Delete objects recursively
+
+--------------------------------------
