@@ -1,0 +1,82 @@
+AWS Day 19
+
+Topic:
+Amazon S3 Website Backup Mini Project
+
+Objective:
+Learn how to back up and restore a small website using Amazon S3 and AWS CLI.
+
+---------------------------------------------------------------------
+
+Mini Project Overview:
+
+-A small website was created locally.
+-The website files were uploaded to an S3 bucket.
+-After modifying the website, only the changed files were synchronized.
+-Finally, the website backup was restored by downloading the files from S3.
+
+---------------------------------------------------------------------
+
+Commands Practiced:
+------------------
+1. Create Bucket:
+
+aws s3 mb s3://website-backup
+
+-Creates a new S3 bucket.
+
+------------------------------------------------------------
+
+2. Upload Website:
+
+aws s3 sync website s3://website-backup
+
+-Uploads all website files.
+
+------------------------------------------------------------
+
+3. List Objects:
+
+aws s3 ls s3://website-backup --recursive
+
+-Displays every file stored in the bucket.
+
+------------------------------------------------------------
+
+4. Synchronize Changes:
+
+aws s3 sync website s3://website-backup
+
+-Uploads only modified or new files.
+
+------------------------------------------------------------
+
+5. Restore Backup:
+
+aws s3 sync s3://website-backup restore
+
+-Downloads all files from the bucket.
+
+------------------------------------------------------------
+
+6. Delete Objects:
+
+aws s3 rm s3://website-backup --recursive
+
+-Deletes every object inside the bucket.
+
+---------------------------------------------------------------------
+
+Real World Uses:
+
+- Website backup
+- Disaster recovery
+- Static website deployment
+- CI/CD artifact storage
+- Project synchronization
+
+---------------------------------------------------------------------
+
+Summary
+
+Today I built a simple backup workflow using Amazon S3 and AWS CLI. I practiced uploading, synchronizing, restoring, and deleting website files, simulating a common DevOps backup process.
