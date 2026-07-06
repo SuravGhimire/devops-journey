@@ -73,6 +73,8 @@ Topics covered:
 - Day 16 : AWS local S3 practice
 - Day 17 : AWS S3 object management practice
 - Day 18 : Amazon S3 Folder Management and Synchronization
+- Day 19 : Amazon S3 Website Backup Mini Project
+
 ---
 
 ## Upcoming Topics
