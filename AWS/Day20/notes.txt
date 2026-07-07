@@ -1,0 +1,23 @@
+AWS Day 20
+
+Topic:
+AWS CLI Configuration & Profiles
+
+Objective:
+Learn how AWS CLI stores credentials and how to manage multiple profiles.
+
+------------------------------------------------------------
+
+Important Observation
+
+When using AWS CLI without specifying AWS_ENDPOINT_URL, the CLI connects to the real AWS cloud.
+
+Since I used dummy credentials (devuser/devpassword), AWS returned an "InvalidAccessKeyId" error.
+
+When I specified:
+
+AWS_ENDPOINT_URL=http://localhost.floci.io:4566
+
+the AWS CLI connected to my local Floci server instead of the real AWS cloud, and the command executed successfully.
+
+This shows how the AWS CLI can communicate with different endpoints while using the same commands.
