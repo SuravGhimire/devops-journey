@@ -77,9 +77,12 @@ Topics covered:
 - Day 20 - AWS CLI Configuration & Profiles
 ---
 
+## Docker 
+
+- Day 1 : Docker Introduction
+
 ## Upcoming Topics
 
-- Docker
 - Kubernetes
 - CI/CD
 
