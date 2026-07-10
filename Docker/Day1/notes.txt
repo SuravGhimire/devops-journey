@@ -1,0 +1,89 @@
+Docker Day 1
+
+Topic:
+Introduction to Docker
+
+------------------------------------------------------------
+
+What is Docker?
+
+-Docker is an open-source platform that allows developers to package applications and their dependencies into lightweight containers.
+
+Containers ensure applications run consistently across different environments.
+
+------------------------------------------------------------
+
+Why Docker?
+
+Before Docker:
+
+"My application works on my machine."
+
+Problems:
+- Different operating systems
+- Missing dependencies
+- Different library versions
+- Difficult deployment
+
+Docker solves these by packaging everything together.
+
+------------------------------------------------------------
+
+Virtual Machine vs Container:
+
+Virtual Machine:
+- Includes full operating system
+- Heavy
+- Slow startup
+- High resource usage
+
+Container:
+- Shares host operating system kernel
+- Lightweight
+- Starts in seconds
+- Efficient resource usage
+
+------------------------------------------------------------
+
+Docker Architecture
+
+Docker Client
+↓
+Docker Daemon
+↓
+Docker Images
+↓
+Docker Containers
+
+------------------------------------------------------------
+
+Important Components:
+
+Docker Engine:
+Runs Docker.
+
+Docker Image:
+Blueprint of an application.
+
+Docker Container:
+Running instance of an image.
+
+Docker Hub:
+Public repository for Docker images.
+
+------------------------------------------------------------
+
+Advantages:
+
+- Fast deployment
+- Lightweight
+- Portable
+- Consistent environments
+- Easy scaling
+- Great for DevOps and CI/CD
+
+------------------------------------------------------------
+
+Summary:
+
+Today I learned why Docker exists, how containers differ from virtual machines, and the basic Docker architecture.
