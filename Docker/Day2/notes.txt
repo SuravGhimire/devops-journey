@@ -1,0 +1,90 @@
+Docker Day 2
+
+Topic:
+Docker Images and Containers
+
+------------------------------------------------------------
+
+Docker Image:
+
+-A Docker Image is a read-only blueprint used to create containers.
+
+It contains:
+- Application code
+- Libraries
+- Dependencies
+- Runtime
+- Configuration
+
+Images do not run.
+
+------------------------------------------------------------
+
+Docker Container:
+
+-A Docker Container is a running instance of a Docker Image.
+
+Containers:
+- Execute applications
+- Can be started and stopped
+- Can be deleted
+- Are isolated from the host system
+
+------------------------------------------------------------
+
+Image vs Container
+
+Image:
+- Blueprint
+- Read-only
+- Stored locally
+
+Container:
+- Running application
+- Writable
+- Created from an image
+
+------------------------------------------------------------
+
+Docker Workflow:
+
+Docker Hub
+↓
+docker pull
+↓
+Docker Image
+↓
+docker run
+↓
+Docker Container
+
+--------------------------------------------
+
+Useful Commands:
+
+docker images
+-Lists downloaded images.
+
+docker ps
+-Shows running containers.
+
+docker ps -a
+-Shows all containers.
+
+docker start
+-Starts a stopped container.
+
+docker stop
+-Stops a running container.
+
+docker rm
+-Removes a container.
+
+docker rmi
+-Removes an image.
+
+------------------------------------------------------------
+
+Summary:
+
+Today I learned the difference between Docker Images and Containers and practiced basic container lifecycle management.
