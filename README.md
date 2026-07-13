@@ -80,7 +80,9 @@ Topics covered:
 ## Docker 
 
 - Day 1 : Docker Introduction
-- Day 2 - Docker Images & Containers
+- Day 2 : Docker Images & Containers
+- Day 3 : Docker Volumes 
+
 ## Upcoming Topics
 
 - Kubernetes
