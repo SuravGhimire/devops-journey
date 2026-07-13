@@ -1,0 +1,54 @@
+Docker Day 3 :
+
+Topic:
+Docker Volumes
+---------------
+
+What is a Docker Volume?
+
+-A Docker Volume is a special storage area managed by Docker that stores data outside the container's writable layer.
+-Volumes allow data to remain even if the container is deleted.
+
+------------------------------------------------------------------------------
+
+Why Do We Need Volumes?
+
+Without a volume:
+- Data exists only inside the container.
+- Deleting the container deletes the data.
+
+With a volume:
+- Data is stored separately.
+- Containers can be recreated without losing data.
+
+---------------------------------------------------
+
+Benefits:
+
+- Persistent storage
+- Easy backups
+- Data sharing between containers
+- Better performance
+- Docker manages storage automatically
+
+--------------------------------------------
+
+Useful Commands:
+
+docker volume create
+-Creates a volume.
+
+docker volume ls
+-Lists all volumes.
+
+docker volume inspect
+-Shows details of a volume.
+
+docker volume rm
+-Removes a volume.
+
+------------------------------------------------------------
+
+Summary:
+
+Today I learned how Docker Volumes provide persistent storage so data survives container deletion.
