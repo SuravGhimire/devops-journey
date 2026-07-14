@@ -1,0 +1,60 @@
+Docker Day 4 :
+
+Topic:
+Docker Bind Mounts
+
+------------------------------------------------------------
+
+What is a Bind Mount?
+
+-A Bind Mount maps a directory or file from the host machine directly into a Docker container.
+-Unlike Docker Volumes, the data remains in the host filesystem.
+
+------------------------------------------------
+
+Why Use Bind Mounts?
+
+- Share project files
+- Live code editing
+- Development environment
+- Easy debugging
+
+----------------------------------------
+
+Bind Mount vs Docker Volume:
+---------------------------
+
+Docker Volume:
+- Managed by Docker
+- Stored in Docker's internal location
+- Best for persistent application data
+
+Bind Mount:
+- Managed by the user
+- Uses existing host directories
+- Best for development
+
+-----------------------------------------
+
+Syntax:
+-------
+docker run -it -v HOST_PATH:CONTAINER_PATH IMAGE
+
+Example:
+
+docker run -it -v ~/project:/app ubuntu
+
+----------------------------------------------------
+
+Advantages:
+----------
+- Real-time synchronization
+- Easy file sharing
+- Great for software development
+- No need to rebuild containers after every file change
+
+------------------------------------------------------------
+
+Summary:
+
+Today I learned how Bind Mounts connect host directories with Docker containers for real-time file sharing.
