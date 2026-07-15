@@ -1,0 +1,63 @@
+Docker Day 5
+
+Topic:
+Docker Networking
+
+------------------------------------
+
+Why Networking?
+
+Containers often need to communicate with:
+- Other containers
+- The host machine
+- The Internet
+
+Docker provides built-in networking to make this possible.
+
+------------------------------------------------------------
+
+Default Docker Networks:
+
+1. bridge
+- Default network
+- Used by standalone containers
+
+2. host
+- Shares the host's network
+
+3. none
+- No networking
+
+---------------------------------------------
+
+Useful Commands:
+
+docker network ls
+-Lists available networks.
+
+docker network inspect
+-Shows network details.
+
+docker network create
+-Creates a custom network.
+
+docker network connect
+-Connects a container to a network.
+
+docker network rm
+-Removes a network.
+
+-----------------------------------
+
+Why Custom Networks?
+
+- Better container communication
+- Name-based communication
+- Improved isolation
+- Cleaner architecture
+
+-----------------------------------
+
+Summary
+
+Today I learned how Docker networks allow containers to communicate securely and efficiently.
