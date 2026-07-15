@@ -1,4 +1,4 @@
-\# DevOps Journey
+# DevOps Journey
 
 This repository contains my daily DevOps and Linux learning progress.
 
@@ -83,6 +83,7 @@ Topics covered:
 - Day 2 : Docker Images & Containers
 - Day 3 : Docker Volumes 
 - Day 4 - Docker Bind Mounts
+- Day 5 - Docker Networking
 
 ## Upcoming Topics
 
