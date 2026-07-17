@@ -84,6 +84,7 @@ Topics covered:
 - Day 3 : Docker Volumes 
 - Day 4 - Docker Bind Mounts
 - Day 5 - Docker Networking
+- Day 6 - Docker Port Mapping
 
 ## Upcoming Topics
 
