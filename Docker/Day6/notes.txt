@@ -1,0 +1,58 @@
+Docker Day 6
+
+Topic:
+Docker Port Mapping
+
+---------------------
+
+What is Port Mapping?
+
+-A container runs in its own isolated network.
+-Port mapping allows traffic from the host machine to reach an application running inside the container.
+
+-------------------------------------------
+
+Syntax:
+
+docker run -p HOST_PORT:CONTAINER_PORT IMAGE
+
+Example:
+
+docker run -p 8080:80 nginx
+
+Host Port:
+8080
+
+Container Port:
+80
+
+---------------------------------------------
+
+Why Port Mapping?
+
+- Access web applications
+- Test APIs
+- Connect browsers to containers
+- Expose services
+
+--------------------------------------------
+
+Useful Commands:
+
+docker ps
+-Shows running containers.
+
+docker stop
+-Stops a container.
+
+docker rm
+-Removes a container.
+
+docker logs
+-Displays container logs.
+
+------------------------------
+
+Summary
+
+Today I learned how to expose container services to the host machine using Docker port mapping.
