@@ -1,1 +1,1 @@
-Hello from my first Docker image!
+Docker Day 7 - Building my own image!

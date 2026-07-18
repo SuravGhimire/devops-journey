@@ -1,0 +1,49 @@
+Docker Day 7
+
+Topic:
+Docker Images & Dockerfiles
+
+------------------------------------------------------------
+
+What is a Dockerfile?
+
+A Dockerfile is a text file containing instructions used to build a Docker image.
+
+-----------------------------------------------------------------------------------
+
+Common Dockerfile Instructions:
+
+FROM
+-Specifies the base image.
+
+WORKDIR
+-Sets the working directory.
+
+COPY
+-Copies files from the host to the image.
+
+RUN
+-Executes commands while building the image.
+
+CMD
+-Specifies the default command when the container starts.
+
+------------------------------------------------------
+
+Docker Image Lifecycle:
+
+Dockerfile
+      ↓
+docker build
+      ↓
+Docker Image
+      ↓
+docker run
+      ↓
+Docker Container
+
+------------------------
+
+Summary
+
+Today I learned how Docker images are created using Dockerfiles.
