@@ -1,0 +1,50 @@
+Docker Day 8
+
+Topic:
+Deploying a Static Website with Nginx
+
+-------------------------------------
+
+What is Nginx?
+
+-Nginx is a lightweight and high-performance web server.
+
+It is commonly used for:
+
+- Hosting websites
+- Reverse proxy
+- Load balancing
+- API gateway
+
+------------------------------------------------------------
+
+How Docker Serves a Website:
+
+HTML Files
+      ↓
+Dockerfile
+      ↓
+Docker Image
+      ↓
+Docker Container
+      ↓
+Browser
+
+---------------------------------
+
+Useful Dockerfile Instructions:
+
+FROM
+-Uses nginx as the base image.
+
+COPY
+-Copies website files into the Nginx web directory.
+
+EXPOSE
+-Documents the port used by the application.
+
+---------------------------------------------------
+
+Summary
+
+Today I deployed my first website using Docker and Nginx.
