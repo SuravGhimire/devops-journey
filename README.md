@@ -86,6 +86,8 @@ Topics covered:
 - Day 5 - Docker Networking
 - Day 6 - Docker Port Mapping
 - Day 7 : Docker Image and Dockerfiles
+- Day 8 : Deploying a Static Website
+---
 
 ## Upcoming Topics
 
