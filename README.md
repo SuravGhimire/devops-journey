@@ -87,6 +87,7 @@ Topics covered:
 - Day 6 - Docker Port Mapping
 - Day 7 : Docker Image and Dockerfiles
 - Day 8 : Deploying a Static Website
+- Day 9 - Docker Build Cache
 ---
 
 ## Upcoming Topics
