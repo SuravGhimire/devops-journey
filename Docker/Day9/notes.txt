@@ -1,0 +1,57 @@
+Docker Day 9
+
+Topic:
+Docker Build Cache
+
+--------------------
+
+What is Docker Build Cache?
+
+Docker stores the result of each Dockerfile instruction as a layer.
+
+If an instruction has not changed, Docker reuses the existing layer instead of rebuilding it.
+
+---------------------------------------------------------------------------------------------
+
+Benefits:
+
+- Faster builds
+- Reduced resource usage
+- Efficient development
+- Reusable layers
+
+-------------------------------------
+
+Docker Build Process:
+
+Dockerfile
+      ↓
+Instruction 1
+      ↓
+Layer 1
+      ↓
+Instruction 2
+      ↓
+Layer 2
+      ↓
+Instruction 3
+      ↓
+Layer 3
+
+-Each instruction creates a new layer.
+
+-------------------------------------------
+
+Useful Commands:
+
+docker build
+
+docker history
+
+docker images
+
+---------------------------------------------
+
+Summary
+
+Today I learned how Docker build cache speeds up image creation by reusing unchanged layers.

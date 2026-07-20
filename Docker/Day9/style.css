@@ -1,0 +1,18 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    text-align:center;
+}
+
+h1{
+    color:green;
+}
+
+.box{
+    margin:30px auto;
+    width:400px;
+    padding:20px;
+    background:white;
+    border-radius:8px;
+    box-shadow:0 0 10px gray;
+}
