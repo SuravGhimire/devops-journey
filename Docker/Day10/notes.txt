@@ -1,0 +1,50 @@
+Docker Day 10
+
+Topic:
+Docker Compose
+
+-----------------------------
+
+What is Docker Compose?
+
+-Docker Compose is a tool used to define and manage multi-container Docker applications.
+
+-Instead of running multiple docker run commands, Compose starts all services from a single YAML file.
+
+------------------------------------------------------------
+
+Benefits:
+
+- Simple configuration
+- Easy multi-container setup
+- Repeatable environments
+- One command deployment
+
+--------------------------------
+
+Common Commands:
+
+docker compose up
+
+docker compose down
+
+docker compose ps
+
+docker compose logs
+
+--------------------------
+
+Compose File:
+
+The compose.yaml file defines:
+- Services
+- Images
+- Ports
+- Volumes
+- Networks
+
+------------------------------
+
+Summary
+
+Today I learned how Docker Compose manages multiple containers using a single configuration file.
