@@ -1,0 +1,52 @@
+Docker Day 11
+
+Topic:
+Dockerizing a Python Flask Application
+
+--------------------------------------
+
+What is Flask?
+
+Flask is a lightweight Python web framework used to build web applications and APIs.
+
+-------------------------------------------------
+
+Why Dockerize Applications?
+
+- Consistent environment
+- Easy deployment
+- Dependency isolation
+- Better scalability
+
+------------------------------
+
+Files Used:
+
+app.py
+-Application source code.
+
+requirements.txt
+-Python package dependencies.
+
+Dockerfile
+-Instructions to build the Docker image.
+
+------------------------------------
+
+Workflow:
+
+Application Code
+        ↓
+Dockerfile
+        ↓
+Docker Image
+        ↓
+Docker Container
+        ↓
+Browser
+
+-----------------------
+
+Summary
+
+Today I learned how to package and run a Python Flask application inside a Docker container.
