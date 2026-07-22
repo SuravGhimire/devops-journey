@@ -89,6 +89,7 @@ Topics covered:
 - Day 8 : Deploying a Static Website
 - Day 9 : Docker Build Cache
 - Day 10 : Docker Compose
+- Day 11 : Dockerizing a Python Flask Application
 ---
 
 ## Upcoming Topics
