@@ -1,0 +1,51 @@
+Docker Day 12
+
+Topic:
+Docker Volumes and Data Persistence
+
+-----------------------------------
+
+Why Data Persistence?
+
+-Containers are temporary.
+-If a container is removed, any data stored inside the container is also removed.
+-Docker Volumes store data outside the container so it remains available even after the container is deleted.
+
+------------------------------------------------------------
+
+Benefits:
+
+- Persistent storage
+- Easy backup
+- Share data between containers
+- Independent of container lifecycle
+
+--------------------------------------
+
+Common Commands:
+
+-docker volume create
+
+-docker volume ls
+
+-docker volume inspect
+
+-docker volume rm
+
+------------------------
+
+Workflow:
+
+Application
+      ↓
+Docker Container
+      ↓
+Docker Volume
+      ↓
+Persistent Data
+
+----------------------
+
+Summary:
+
+Today I learned how Docker volumes allow data to persist beyond the life of a container.
