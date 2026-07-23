@@ -90,6 +90,7 @@ Topics covered:
 - Day 9 : Docker Build Cache
 - Day 10 : Docker Compose
 - Day 11 : Dockerizing a Python Flask Application
+- Day 12 : Docker Volumes 
 ---
 
 ## Upcoming Topics
