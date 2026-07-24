@@ -91,6 +91,7 @@ Topics covered:
 - Day 10 : Docker Compose
 - Day 11 : Dockerizing a Python Flask Application
 - Day 12 : Docker Volumes 
+- Day 13 : Multi-container Application
 ---
 
 ## Upcoming Topics
