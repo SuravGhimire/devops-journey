@@ -1,0 +1,51 @@
+Docker Day 13
+
+Topic:
+Docker Compose with Multiple Containers
+
+---------------------------------------
+
+What is a Multi-container Application?
+
+-Modern applications are usually made up of multiple services instead of one large application.
+
+Example:
+
+Frontend
+↓
+Backend API
+↓
+Database
+
+-Each service runs inside its own container.
+
+------------------------------------------------------------
+
+Redis:
+
+Redis is an in-memory key-value database.
+
+It is commonly used for:
+- Caching
+- Session storage
+- Counters
+- Queues
+
+-------------------------------
+
+Docker Compose:
+
+-Compose automatically creates a network.
+-Containers communicate using service names.
+
+Example:
+
+Flask → redis
+
+instead of using IP addresses.
+
+------------------------------------
+
+Summary:
+
+Today I learned how multiple containers communicate using Docker Compose.
