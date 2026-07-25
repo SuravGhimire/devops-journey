@@ -92,6 +92,7 @@ Topics covered:
 - Day 11 : Dockerizing a Python Flask Application
 - Day 12 : Docker Volumes 
 - Day 13 : Multi-container Application
+- Day 14 : Docker Environment Variables
 ---
 
 ## Upcoming Topics
