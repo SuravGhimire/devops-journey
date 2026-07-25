@@ -1,0 +1,46 @@
+Docker Day 14
+
+Topic:
+Environment Variables
+
+-----------------------------------------
+
+What are Environment Variables?
+
+-Environment variables are values provided to an application at runtime.
+-Instead of hardcoding values inside the application, they can be supplied externally.
+
+------------------------------------------------------------
+
+Common Uses
+
+- Database credentials
+- API keys
+- Secret tokens
+- Port numbers
+- Application mode
+
+----------------------------
+
+Benefits:
+
+- Better security
+- Easier configuration
+- Reusable images
+- Different settings for development and production
+
+---------------------------------------------------
+
+Commands:
+
+-docker run -e
+
+-docker inspect
+
+-docker compose
+
+--------------------------------------
+
+Summary:
+
+Today I learned how Docker passes configuration to applications using environment variables.
