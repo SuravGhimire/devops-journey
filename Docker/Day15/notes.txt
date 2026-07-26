@@ -1,0 +1,45 @@
+Docker Day 15
+
+Topic: (Dockerizing a Database)
+Running PostgreSQL in Docker
+
+-------------------------------
+
+What is PostgreSQL?
+
+PostgreSQL is an open-source relational database management system (RDBMS).
+
+-------------------------------------------------------
+
+Why Run Databases in Docker?
+
+- Easy setup
+- Consistent environment
+- Isolated database
+- Simple testing
+- Easy cleanup
+
+---------------------------------------
+
+Important Environment Variables:
+
+-POSTGRES_USER
+-Database username
+
+-POSTGRES_PASSWORD
+-Database password
+
+-POSTGRES_DB
+-Database name
+
+----------------------------------------------------
+
+Docker Volume:
+
+-A volume stores database files so data remains even if the container is removed.
+
+----------------------------------------------
+
+Summary:
+
+Today I learned how to run PostgreSQL inside a Docker container with persistent storage.
