@@ -1,0 +1,64 @@
+Docker Day 16
+
+Topic:
+Flask + PostgreSQL
+
+-------------------
+
+Application Architecture:
+
+Browser
+    │
+Flask Application
+    │
+PostgreSQL Database
+
+---------------------------
+
+How Containers Communicate?
+
+-Docker Compose automatically creates a network.
+-Containers communicate using service names.
+
+Example:
+
+Flask
+↓
+postgres
+
+-No IP address is required.
+
+-------------------------------------------
+
+Python Library:
+
+psycopg2
+
+-Used to connect Python applications to PostgreSQL.
+
+--------------------------------------------------
+
+Workflow:
+
+Browser
+↓
+Flask Container
+↓
+PostgreSQL Container
+↓
+Database Response
+
+--------------------------
+
+Summary:
+
+Today I learned how a Flask application communicates with PostgreSQL using Docker Compose.
+
+
+----------------------------------
+
+Important Note:
+
+-The Flask container may start before PostgreSQL is ready.
+-Although depends_on starts the database container first, it does not wait until the database is ready to accept connections.
+-A retry mechanism or health check is commonly used in real-world applications to solve this issue.
