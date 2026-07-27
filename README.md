@@ -94,6 +94,7 @@ Topics covered:
 - Day 13 : Multi-container Application
 - Day 14 : Docker Environment Variables
 - Day 15 : PostgreSQL in Docker
+- Day 16 : Flask + PostgreSQL
 ---
 
 ## Upcoming Topics
