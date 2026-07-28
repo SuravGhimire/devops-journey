@@ -95,6 +95,7 @@ Topics covered:
 - Day 14 : Docker Environment Variables
 - Day 15 : PostgreSQL in Docker
 - Day 16 : Flask + PostgreSQL
+- Day 17 : Adminer with Docker Compose
 ---
 
 ## Upcoming Topics
