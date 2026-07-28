@@ -1,0 +1,57 @@
+Docker Day 17
+
+Topic:
+Adminer with Docker Compose
+
+----------------------------
+
+What is Adminer?
+
+Adminer is a lightweight web application used to manage databases through a browser.
+
+------------------------------------------------------------
+
+Why Adminer?
+
+Without Adminer:
+
+Application
+↓
+Database
+
+-You cannot easily view tables or records.
+
+-----------------------------------------------
+
+With Adminer:
+
+Browser
+↓
+Adminer
+↓
+PostgreSQL
+
+We can:
+
+- View databases
+- Create tables
+- Run SQL queries
+- Edit records
+
+---------------------------------------
+
+Docker Compose Stack:
+
+Browser
+↓
+Flask
+↓
+PostgreSQL
+↑
+Adminer
+
+--------------------
+
+Summary:
+
+Today I learned how to add Adminer to a Docker Compose application for database management.
