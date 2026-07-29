@@ -1,0 +1,18 @@
+services:
+
+  web:
+
+    build: .
+
+  nginx:
+
+    image: nginx:latest
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+    depends_on:
+      - web

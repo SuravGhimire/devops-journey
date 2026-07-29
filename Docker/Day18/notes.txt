@@ -1,0 +1,50 @@
+Docker Day 18
+
+Topic:
+Nginx Reverse Proxy
+
+------------------
+
+What is Nginx?
+
+-Nginx is a web server and reverse proxy.
+
+-----------------------------------------------------
+
+Without Nginx:
+
+Browser
+↓
+Flask
+
+--------------------
+
+With Nginx:
+
+Browser
+↓
+Nginx
+↓
+Flask
+
+----------------------
+
+Benefits:
+
+- Better performance
+- Load balancing
+- SSL termination
+- Static file serving
+- Security
+
+------------------------------------------------------------
+
+Reverse Proxy:
+
+-A reverse proxy receives requests from clients and forwards them to backend applications.
+
+------------------------------------------------------------------------------------------
+
+Summary:
+
+Today I learned how Nginx forwards requests to a Flask application running in Docker.
