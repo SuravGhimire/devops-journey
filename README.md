@@ -96,6 +96,7 @@ Topics covered:
 - Day 15 : PostgreSQL in Docker
 - Day 16 : Flask + PostgreSQL
 - Day 17 : Adminer with Docker Compose
+- Day 18 : Nginx Reverse Proxy
 ---
 
 ## Upcoming Topics
