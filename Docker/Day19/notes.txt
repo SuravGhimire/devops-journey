@@ -1,0 +1,43 @@
+Docker Day 19
+
+Topic:
+Multi-Service Application
+
+--------------------------
+
+Components:
+
+Frontend
+↓
+Backend API
+↓
+Database
+
+------------
+
+-Docker Compose can run multiple services together.
+-Each service has its own container.
+-Containers communicate using service names.
+
+Example:
+
+frontend
+↓
+backend
+↓
+postgres
+
+----------------------
+
+Benefits:
+
+- Easy deployment
+- Isolated services
+- Easy scaling
+- Real-world architecture
+
+-------------------------------
+
+Summary:
+
+Today I learned how multiple containers work together to build a complete application.
