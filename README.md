@@ -97,6 +97,7 @@ Topics covered:
 - Day 16 : Flask + PostgreSQL
 - Day 17 : Adminer with Docker Compose
 - Day 18 : Nginx Reverse Proxy
+- Day 19 : Multi-Service Application 
 ---
 
 ## Upcoming Topics
