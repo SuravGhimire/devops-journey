@@ -1,0 +1,125 @@
+Docker Day 20:
+--------------
+
+Topic:
+Docker Optimization and Best Practices
+
+1. Multi-stage builds
+---------------------
+
+Multi-stage builds allow us to use multiple FROM statements inside one Dockerfile.
+
+The first stage can be used for building or install ingdependencies.
+
+The final stage contains only what is required to run the application.
+
+Benefits:
+
+- Smaller images
+- Less unnecessary content
+- Better security
+- Cleaner production images
+
+
+2. .dockerignore
+-----------------
+
+.dockerignore prevents unnecessary files from being sent to Docker during the build process.
+
+Examples:
+
+.git
+__pycache__
+*.pyc
+.env
+
+
+3. Docker Healthcheck
+---------------------
+
+A health check allows Docker to determine whether an application is actually healthy.
+
+Example:
+
+/health
+
+Docker can periodically call this endpoint and report the container as healthy or unhealthy.
+
+
+4. Docker Compose
+-----------------
+
+Docker Compose allows us to define application services in a YAML file and manage them together.
+
+Useful commands:
+
+docker compose up -d
+docker compose ps
+docker compose logs
+docker compose down
+
+
+5. Image Inspection
+-------------------
+
+Useful commands:
+
+docker images
+docker image inspect IMAGE
+docker image prune
+
+
+6. Container Management
+-----------------------
+
+Useful commands:
+
+docker ps
+docker ps -a
+docker stop CONTAINER
+docker start CONTAINER
+docker logs CONTAINER
+docker inspect CONTAINER
+
+
+7. Docker Cleanup
+-----------------
+
+Unused Docker resources can be cleaned with:
+
+docker container prune
+docker image prune
+docker network prune
+
+-Care should be taken before using aggressive cleanup commands.
+
+
+8. Final Learning Summary
+--------------------------
+
+During the 20-day Docker journey I practiced:
+
+- Docker installation
+- Images
+- Containers
+- Container lifecycle
+- Docker volumes
+- Bind mounts
+- Docker networking
+- Port mapping
+- Dockerfiles
+- Custom images
+- Nginx
+- Docker Compose
+- Multi-container applications
+- Flask applications
+- PostgreSQL
+- Reverse proxy concepts
+- Multi-stage builds
+- .dockerignore
+- Health checks
+- Docker image optimization
+- Docker cleanup
+- Docker troubleshooting
+
+Docker is now an important part of my DevOps foundation.

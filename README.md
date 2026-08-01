@@ -98,6 +98,7 @@ Topics covered:
 - Day 17 : Adminer with Docker Compose
 - Day 18 : Nginx Reverse Proxy
 - Day 19 : Multi-Service Application 
+- Day 20 : Docker Optimization & Best Practices
 ---
 
 ## Upcoming Topics
