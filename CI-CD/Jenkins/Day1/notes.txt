@@ -1,0 +1,125 @@
+Jenkins Day 1
+------------
+
+Topic:
+CI/CD Fundamentals and Jenkins Introduction
+
+CI:
+--
+-CI means Continuous Integration.
+
+-Developers frequently integrate their code into ashared repository.
+-An automation server can automatically build and test the application after code changes.
+
+
+CD:
+--
+-CD can mean Continuous Delivery or Continuous Deployment.
+
+A typical workflow is:
+Code
+ ↓
+Build
+ ↓
+Test
+ ↓
+Package
+ ↓
+Deploy
+
+
+Jenkins:
+-------
+
+-Jenkins is an automation server commonly used to implement CI/CD pipelines.
+
+Jenkins can automate tasks such as:
+
+- Building applications
+- Running tests
+- Creating Docker images
+- Deploying applications
+- Running scripts
+
+
+Basic Architecture:
+------------------
+
+Jenkins Controller
+        ↓
+     Agents
+
+-The controller manages jobs and orchestration.
+
+-Agents execute tasks.
+
+
+Learning Goal:
+-------------
+
+-Build an automated CI/CD pipeline using:
+
+GitHub
+  ↓
+Jenkins
+  ↓
+Docker
+  ↓
+Kubernetes
+
+
+----------------------------------------------------------------------
+
+Jenkins Installation:
+--------------------
+
+-Java 21 was installed as the runtime required by Jenkins.
+-Jenkins was installed using the official Jenkins LTS Debian repository.
+-Jenkins runs as a systemd service.
+
+Default Jenkins web interface:
+-http://localhost:8080
+
+Useful commands:
+
+-sudo systemctl start jenkins
+-sudo systemctl status jenkins
+-sudo systemctl enable jenkins
+
+Initial administrator password:
+
+-sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+--------------------------------------------------------------------------------
+
+Practical 1 - First Jenkins Job
+-------------------------------
+
+Created a Freestyle Jenkins project:
+
+day1-first-job
+
+Build step:
+-----------
+echo "Hello from Jenkins!"
+echo "Jenkins Day 1 is working!"
+date
+whoami
+
+-The job was executed using Build Now.
+
+* Build #1 completed successfully.
+
+Important concepts:
+
+Job:
+- A Jenkins job contains instructions Jenkins executes.
+
+Build:
+- A build is one execution/run of a Jenkins job.
+
+Console Output:
+- Shows the commands executed and their output.
+
+SUCCESS:
+- Indicates that the build completed successfully.
