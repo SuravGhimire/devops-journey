@@ -123,3 +123,47 @@ Console Output:
 
 SUCCESS:
 - Indicates that the build completed successfully.
+
+--------------------------------------------------------------
+
+Practical 2 - GitHub → Jenkins CI Workflow:
+------------------------------------------
+
+Configured Jenkins to use the GitHub repository:
+
+https://github.com/SuravGhimire/devops-journey.git
+
+Branch:
+main
+
+-Jenkins successfully cloned the repository andchecked out the main branch.
+
+-Initial build failed because Jenkins was configuredto use the master branch.
+
+-After changing the branch to main, Jenkins successfullyconnected to the repository.
+
+-The next build failed because app.sh was not present in the GitHub commit Jenkins was building.
+-Investigation showed that app.sh existed in the local repository but had not yet been pushed to GitHub.
+-After pushing the second commit, Jenkins fetched the updated repository and successfully executed app.sh.
+
+Build result:
+
+Finished: SUCCESS
+
+CI workflow learned:
+
+Local Code
+    ↓
+Git Commit
+    ↓
+Git Push
+    ↓
+GitHub
+    ↓
+Jenkins Checkout
+    ↓
+Jenkins Workspace
+    ↓
+Build Script
+    ↓
+SUCCESS
