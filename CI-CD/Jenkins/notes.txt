@@ -1,0 +1,33 @@
+Practical 3 - Poll SCM
+
+Configured Poll SCM build trigger.
+
+Schedule:
+
+H/5 * * * *
+
+Jenkins periodically checks the GitHub repository for new commits.
+
+Workflow:
+
+Modify Code
+      ↓
+Git Commit
+      ↓
+Git Push
+      ↓
+GitHub
+      ↓
+Poll SCM detects changes
+      ↓
+Automatic Jenkins Build
+      ↓
+SUCCESS
+
+Difference:
+
+Manual Build:
+Developer → Build Now → Jenkins
+
+Automatic Build:
+Developer → Git Push → Jenkins detects change → Build
