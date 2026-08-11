@@ -18,3 +18,140 @@ Jenkins
       │
       ▼
 Build Starts Automatically ✅
+
+-------------------------------
+
+Day 3 - GitHub Webhooks & ngrok
+
+Objective:
+-Learn how to trigger Jenkins builds automatically using GitHub Webhooks instead of Poll SCM.
+
+--------------------------------------------------
+
+What I Learned:
+
+- Difference between Poll SCM and GitHub Webhooks.
+- Why Webhooks are faster and more efficient.
+- How ngrok exposes a local Jenkins server to the internet.
+- How GitHub communicates with Jenkins.
+- Automatic build triggering after every Git push.
+
+--------------------------------------------------
+
+Installed:
+
+- ngrok
+
+Installation:
+
+sudo snap install ngrok
+
+Verify:
+
+ngrok version
+
+---------------------------
+
+Connect ngrok:
+
+Authenticate:
+
+ngrok config add-authtoken <YOUR_AUTH_TOKEN>
+
+Start tunnel:
+
+ngrok http 8080
+
+Example:
+
+Forwarding
+https://xxxxxxxx.ngrok-free.dev -> http://localhost:8080
+
+-----------------------------------------------------------
+
+Configure Jenkins:
+
+Open:
+
+Dashboard
+→ Job
+→ Configure
+
+Enable:
+
+✓ GitHub hook trigger for GITScm polling
+
+Disable:
+
+Poll SCM
+
+--------------------------------------------------
+
+Configure GitHub Webhook:
+
+Repository
+
+Settings
+→ Webhooks
+→ Add Webhook
+
+Payload URL
+
+https://<ngrok-url>/github-webhook/
+
+Content-Type
+
+application/json
+
+Events
+
+Just the push event
+
+Save Webhook
+
+--------------------------------------------------
+
+Test:
+Modify project
+
+git add .
+git commit -m "Webhook test"
+git push origin main
+
+Result:
+
+Git Push
+↓
+GitHub
+↓
+Webhook
+↓
+ngrok
+↓
+Jenkins
+↓
+Automatic Build
+
+-----------------------------------
+
+Problems Faced:
+
+- ngrok warning page appeared.
+  Solution:
+  Click "Visit Site" once.
+
+- Jenkins was only accessible locally initially.
+  Solution:
+  Started ngrok and used the generated forwarding URL.
+
+- Learned that free ngrok URLs change after restarting ngrok.
+
+----------------------------------------------------------------
+
+ Key Takeaways:
+
+- Poll SCM checks GitHub periodically.
+- Webhooks notify Jenkins instantly.
+- ngrok allows external services to access localhost.
+- GitHub Webhooks are the preferred CI trigger mechanism.
+- Successfully built my first event-driven CI pipeline.
