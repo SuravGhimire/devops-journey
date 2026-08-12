@@ -5,19 +5,29 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Building the application...'
+                echo 'Starting build...'
+
+                sh '''
+                    cd "$WORKSPACE/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+                    chmod +x app.sh
+                '''
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
+
+                sh '''
+                    cd "$WORKSPACE/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+                    ./app.sh
+                '''
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the application...'
+                echo 'Deployment stage completed.'
             }
         }
     }
