@@ -1,0 +1,277 @@
+JENKINS DAY 4 - PIPELINE AS CODE
+
+1. What is Jenkins Pipeline?
+
+-Jenkins Pipeline is a way to define and automate a CI/CD workflow using code instead of configuring every step manually through the Jenkins UI.
+-The pipeline configuration is usually stored in a file called:
+
+Jenkinsfile:
+
+-The Jenkinsfile can be stored inside the Git repository along with the application code.
+
+--------------------------------------------------
+
+2. Jenkinsfile:
+
+A Jenkinsfile defines the stages and steps that Jenkins should execute.
+
+Basic structure:
+
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+            }
+        }
+    }
+}
+
+--------------------------------------------------
+
+3. Pipeline:
+
+pipeline {
+    ...
+}
+
+Defines a Jenkins Declarative Pipeline.
+
+--------------------------------------------------
+
+4. Agent:
+
+agent any
+
+-Tells Jenkins that the pipeline can run on any available Jenkins agent.
+
+--------------------------------------------------
+
+5. Stages
+
+stages {
+    ...
+}
+
+-Contains the different phases of the CI/CD process.
+
+Example:
+
+Build
+Test
+Deploy
+
+-Each stage represents a logical part of the pipeline.
+
+--------------------------------------------------
+
+6. Steps:
+
+steps {
+    ...
+}
+
+-Contains the commands Jenkins actually executes.
+
+Example:
+
+echo 'Building the application...'
+
+--------------------------------------------------
+
+7. Pipeline From SCM:
+
+In Jenkins, the Day 4 job was configured using:
+
+Definition:
+Pipeline script from SCM
+
+SCM:
+Git
+
+Repository:
+https://github.com/SuravGhimire/devops-journey.git
+
+Branch:
+*/main
+
+Script Path:
+
+CI-CD/Jenkins/Day4/Jenkinsfile
+
+This tells Jenkins to:
+
+1. Clone the Git repository.
+2. Checkout the main branch.
+3. Find the Jenkinsfile.
+4. Execute the pipeline defined inside it.
+
+--------------------------------------------------
+
+8. Jenkins Workspace:
+
+-Jenkins checks out the Git repository into the job's workspace.
+
+Example:
+
+/var/lib/jenkins/workspace/day4-pipeline/
+
+The repository files are available inside this directory.
+
+Jenkins provides the environment variable:
+
+$WORKSPACE
+
+which points to the current job workspace.
+
+Example:
+
+cd "$WORKSPACE/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+
+Using $WORKSPACE is better than hardcoding the workspace path.
+
+--------------------------------------------------
+
+9. Running Shell Commands:
+
+Jenkins Pipeline can execute Linux shell commands using:
+
+sh
+
+Example:
+
+sh '''
+    cd "$WORKSPACE/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+    chmod +x app.sh
+'''
+
+Another example:
+
+sh '''
+    cd "$WORKSPACE/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+    ./app.sh
+'''
+
+--------------------------------------------------
+
+10. Practical Completed
+
+Created:
+
+CI-CD/Jenkins/Day4/Jenkinsfile
+
+The pipeline contains:
+
+Build
+Test
+Deploy
+
+The Test stage executes the existing hello-jenkins project:
+
+CI-CD/Jenkins/Day1/practice/hello-jenkins/app.sh
+
+Jenkins successfully executed:
+
+./app.sh
+
+Output:
+
+Hello from my Jenkins project!
+This code is stored in Git.
+Jenkins will execute it automatically.
+Jenkins Day 2 automatic trigger test!
+
+Build result:
+
+Finished: SUCCESS
+
+--------------------------------------------------
+
+11. Current Pipeline Flow
+
+GitHub
+   ↓
+Jenkins
+   ↓
+Checkout Repository
+   ↓
+Jenkinsfile
+   ↓
+Build
+   ↓
+Test
+   ↓
+Run app.sh
+   ↓
+Deploy
+   ↓
+SUCCESS
+
+--------------------------------------------------
+
+12. Important Learning
+
+Previously, Jenkins jobs were configured mainly through the Jenkins UI.
+
+With Pipeline as Code, the CI/CD workflow is stored in Git as a Jenkinsfile.
+
+Benefits:
+
+- Pipeline configuration is version controlled.
+- Pipeline changes can be tracked through Git.
+- Pipeline can be reviewed with code changes.
+- Jenkins jobs become easier to reproduce.
+- CI/CD configuration becomes part of the project.
+
+--------------------------------------------------
+
+13. Next Step
+
+Configure the Day 4 Pipeline for automatic GitHub triggering.
+
+Target workflow:
+
+Developer pushes code
+        ↓
+GitHub
+        ↓
+GitHub Webhook
+        ↓
+ngrok
+        ↓
+Jenkins
+        ↓
+Pipeline automatically starts
+        ↓
+Build → Test → Deploy
+
+--------------------------------------------------
+
+DAY 4 STATUS
+
+[✓] Created Jenkinsfile
+[✓] Created Declarative Pipeline
+[✓] Configured Pipeline from SCM
+[✓] Connected Jenkins to GitHub repository
+[✓] Used main branch
+[✓] Used Jenkins workspace
+[✓] Executed shell commands from Pipeline
+[✓] Executed real project script
+[✓] Build/Test/Deploy stages completed
+[✓] Finished: SUCCESS
+[ ] Automatic GitHub trigger testing
