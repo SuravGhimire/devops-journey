@@ -1,0 +1,215 @@
+Jenkins Day 5 : Environment variable and Build parameters
+
+1. Introduction
+
+Today I learned how to make a Jenkins Pipeline more dynamic using:
+
+- Build Parameters
+- Environment Variables
+- Jenkins built-in variables
+- Pipeline as Code
+
+Instead of creating separate pipelines for different environments, the same pipeline can behave differently depending on the selected parameter.
+
+----------------------------------------------------------------------------------------------
+
+2. Build Parameters:
+
+Jenkins allows users to provide input before starting a build.
+
+In this project, a choice parameter called ENVIRONMENT was created.
+
+Available options:
+
+- development
+- staging
+- production
+
+The parameter was defined inside the Jenkinsfile.
+
+Example:
+
+parameters {
+    choice(
+        name: 'ENVIRONMENT',
+        choices: ['development', 'staging', 'production'],
+        description: 'Select the environment for deployment'
+    )
+}
+
+After configuring the parameter, Jenkins provides a "Build with Parameters" option.
+
+The selected value can be accessed in the pipeline using:
+
+${params.ENVIRONMENT}
+
+--------------------------------------------------
+
+3. Environment Variables:
+
+Environment variables allow values to be defined once and reused throughout the pipeline.
+
+Example:
+
+environment {
+    APP_NAME = 'hello-jenkins'
+    PROJECT_PATH = "${WORKSPACE}/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+}
+
+Custom variables used:
+
+APP_NAME
+
+PROJECT_PATH
+
+These variables make the Jenkinsfile easier to read and maintain.
+
+--------------------------------------------------
+
+4. Jenkins Built-in Variable:
+
+Jenkins automatically provides the WORKSPACE environment variable.
+
+WORKSPACE points to the directory where Jenkins clones and runs the project.
+
+Example:
+
+$WORKSPACE
+
+Example workspace path:
+
+/var/lib/jenkins/workspace/day5-pipeline
+
+Instead of hardcoding the full workspace path, the PROJECT_PATH variable was created using WORKSPACE.
+
+Example:
+
+PROJECT_PATH = "${WORKSPACE}/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+
+--------------------------------------------------
+
+5. Running the Application:
+
+The Test stage executes the existing Jenkins practice script.
+
+Commands:
+
+cd "$PROJECT_PATH"
+chmod +x app.sh
+./app.sh
+
+The application successfully produced:
+
+Hello from my Jenkins project!
+This code is stored in Git.
+Jenkins will execute it automatically.
+Jenkins Day 2 automatic trigger test!
+
+--------------------------------------------------
+
+6. Dynamic Deployment:
+
+The Deploy stage uses both the application name and selected environment.
+
+Example:
+
+echo "Deploying ${APP_NAME} to ${params.ENVIRONMENT}"
+
+This allows the same pipeline to behave differently depending on the selected environment.
+
+--------------------------------------------------
+
+7. Tests Performed:
+
+Build #1:
+
+ENVIRONMENT = development
+
+Output:
+
+Deploying hello-jenkins to development
+
+Result:
+
+SUCCESS
+
+
+Build #2:
+
+ENVIRONMENT = staging
+
+Output:
+
+Deploying hello-jenkins to staging
+
+Result:
+
+SUCCESS
+
+
+Build #3:
+
+ENVIRONMENT = production
+
+Output:
+
+Deploying hello-jenkins to production
+
+Result:
+
+SUCCESS
+
+--------------------------------------------------
+
+8. Pipeline Flow:
+
+Build with Parameters
+        ↓
+Select Environment
+        ↓
+development / staging / production
+        ↓
+Jenkins Pipeline
+        ↓
+Build Stage
+        ↓
+Test Stage
+        ↓
+Run app.sh
+        ↓
+Deploy Stage
+        ↓
+Use selected environment
+        ↓
+SUCCESS
+
+--------------------------------------------------
+
+9. Key Learning:
+
+-The same Jenkins Pipeline can be reused for multiple environments.
+
+-Build parameters allow users to provide input when starting a build.
+
+-Environment variables help avoid repeating values throughout the Jenkinsfile.
+
+-Jenkins built-in variables such as WORKSPACE provide information about the current build environment.
+
+-Using Pipeline as Code, parameters and environment variables can be stored and version-controlled inside the Jenkinsfile.
+
+--------------------------------------------------
+
+DAY 5 STATUS:
+
+Created Day 5 Jenkinsfile
+Learned Jenkins build parameters
+Created ENVIRONMENT choice parameter
+Tested development environment
+Tested staging environment
+Tested production environment
+Learned custom environment variables
+Used APP NAME variable
+Used PROJECT PATH variable
+Used Jenkins WORKSPACE variable
+Executed app.sh from Jenkins Pipeline
+Completed all builds successfully
