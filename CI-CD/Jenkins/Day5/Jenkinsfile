@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(
+            name: 'ENVIRONMENT',
+            choices: ['development', 'staging', 'production'],
+            description: 'Select the environment for deployment'
+        )
+    }
+
+    environment {
+        APP_NAME = 'hello-jenkins'
+        PROJECT_PATH = "${WORKSPACE}/CI-CD/Jenkins/Day1/practice/hello-jenkins"
+    }
+
+    stages {
+
+        stage('Build') {
+            steps {
+                echo "Building ${APP_NAME}..."
+                echo "Workspace: ${WORKSPACE}"
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running application test...'
+
+                sh '''
+                    cd "$PROJECT_PATH"
+                    chmod +x app.sh
+                    ./app.sh
+                '''
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploying ${APP_NAME} to ${params.ENVIRONMENT}"
+            }
+        }
+    }
+}
