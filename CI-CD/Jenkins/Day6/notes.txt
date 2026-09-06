@@ -1,0 +1,73 @@
+JENKINS DAY 6 — CONDITIONAL STAGES AND POST ACTIONS
+
+Topics Covered:
+- Jenkins Pipeline conditional stages
+- when directive
+- expression condition
+- Using build parameters in conditions
+- post section
+- success, failure, and always actions
+- Environment-specific deployment stages
+
+Key Concepts:
+
+1. when Directive
+The when directive controls whether a stage should execute.
+
+Example:
+when {
+    expression {
+        params.ENVIRONMENT == 'production'
+    }
+}
+
+The stage runs only when ENVIRONMENT is production.
+
+2. Build Parameters
+The ENVIRONMENT parameter allows the user to select:
+- development
+- staging
+- production
+
+The selected value is accessed using:
+
+params.ENVIRONMENT
+
+3. Conditional Deployment
+The pipeline contains separate deployment stages for:
+- Development
+- Staging
+- Production
+
+Only the stage matching the selected environment executes.
+
+4. post Section
+The post section runs actions after the pipeline stages finish.
+
+success:
+Runs when the pipeline completes successfully.
+
+failure:
+Runs when the pipeline fails.
+
+always:
+Runs regardless of whether the pipeline succeeds or fails.
+
+5. Pipeline Flow
+
+Build
+  ↓
+Test
+  ↓
+Environment-specific deployment
+  ↓
+Post actions
+
+Practical Learning:
+- Created a Jenkinsfile using parameters and environment variables.
+- Added conditional deployment stages using when.
+- Used params.ENVIRONMENT to control deployment.
+- Added post actions for success, failure, and always conditions.
+
+Real-World Connection:
+Conditional stages are useful when the same CI/CD pipeline needs to deploy differently depending on the target environment.

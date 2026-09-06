@@ -1,0 +1,77 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(
+            name: 'ENVIRONMENT',
+            choices: ['development', 'staging', 'production'],
+            description: 'Select the deployment environment'
+        )
+    }
+
+    environment {
+        APP_NAME = 'hello-jenkins'
+    }
+
+    stages {
+
+        stage('Build') {
+            steps {
+                echo "Building ${APP_NAME}..."
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+            }
+        }
+
+        stage('Deploy to Development') {
+            when {
+                expression {
+                    params.ENVIRONMENT == 'development'
+                }
+            }
+            steps {
+                echo "Deploying ${APP_NAME} to DEVELOPMENT"
+            }
+        }
+
+        stage('Deploy to Staging') {
+            when {
+                expression {
+                    params.ENVIRONMENT == 'staging'
+                }
+            }
+            steps {
+                echo "Deploying ${APP_NAME} to STAGING"
+            }
+        }
+
+        stage('Deploy to Production') {
+            when {
+                expression {
+                    params.ENVIRONMENT == 'production'
+                }
+            }
+            steps {
+                echo "Deploying ${APP_NAME} to PRODUCTION"
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Jenkins pipeline completed successfully.'
+        }
+
+        failure {
+            echo 'Jenkins pipeline failed.'
+        }
+
+        always {
+            echo 'Pipeline execution finished.'
+        }
+    }
+}
