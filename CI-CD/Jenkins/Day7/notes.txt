@@ -1,0 +1,76 @@
+JENKINS DAY 7 — BUILD ARTIFACTS
+
+Topics Covered:
+- Jenkins build artifacts
+- Creating files during a pipeline
+- Testing generated artifacts
+- archiveArtifacts step
+- Artifact fingerprinting
+- Accessing artifacts from Jenkins build results
+
+Key Concepts:
+
+1. Build Artifact
+
+An artifact is a file produced by a build that can be stored and used after the build finishes.
+
+In this practical, Jenkins creates:
+
+build/app-info.txt
+
+2. Creating the Artifact
+
+The Build stage creates the artifact using a shell script.
+
+The file contains:
+- Application name
+- Build information
+- Build timestamp
+
+3. Testing the Artifact
+
+The Test stage verifies that the artifact was created successfully.
+
+Example:
+
+test -f build/app-info.txt
+
+4. Archiving the Artifact
+
+Jenkins archives the artifact using:
+
+archiveArtifacts artifacts: 'build/app-info.txt',
+                 fingerprint: true
+
+This makes the artifact available from the Jenkins build page.
+
+5. Post Actions
+
+The pipeline uses post actions to display:
+- Successful artifact archiving
+- Pipeline failure
+- Pipeline completion
+
+Pipeline Flow:
+
+Build
+  ↓
+Create Artifact
+  ↓
+Test Artifact
+  ↓
+Archive Artifact
+  ↓
+Post Actions
+
+Practical Result:
+
+The pipeline successfully generated and archived:
+
+build/app-info.txt
+
+The archived artifact was verified from the Jenkins build page.
+
+Real-World Connection:
+
+Artifacts can contain compiled applications, JAR files, ZIP files, Docker build outputs, test reports, or other files that need to be passed between CI/CD stages.
