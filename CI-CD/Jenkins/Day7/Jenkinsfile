@@ -1,0 +1,57 @@
+pipeline {
+    agent any
+
+    environment {
+        APP_NAME = 'hello-jenkins'
+    }
+
+    stages {
+
+        stage('Build') {
+            steps {
+                echo "Building ${APP_NAME}..."
+
+                sh '''
+                    mkdir -p build
+                    echo "Application: ${APP_NAME}" > build/app-info.txt
+                    echo "Build completed by Jenkins." >> build/app-info.txt
+                    date >> build/app-info.txt
+                '''
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+
+                sh '''
+                    test -f build/app-info.txt
+                    echo "Artifact file test passed."
+                '''
+            }
+        }
+
+        stage('Archive Artifact') {
+            steps {
+                echo 'Archiving build artifact...'
+
+                archiveArtifacts artifacts: 'build/app-info.txt',
+                                 fingerprint: true
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build artifact archived successfully.'
+        }
+
+        failure {
+            echo 'Pipeline failed.'
+        }
+
+        always {
+            echo 'Day 7 pipeline execution finished.'
+        }
+    }
+}
