@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Build') {
+            steps {
+                echo 'Building application...'
+            }
+        }
+
+        stage('Use Secret') {
+            steps {
+                withCredentials([
+                    string(
+                        credentialsId: 'day8-demo-secret',
+                        variable: 'DEMO_SECRET'
+                    )
+                ]) {
+                    sh '''
+                        echo "Secret credential is available to the pipeline."
+                        echo "Secret length: ${#DEMO_SECRET}"
+                    '''
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing application...'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Credentials pipeline completed successfully.'
+        }
+
+        failure {
+            echo 'Credentials pipeline failed.'
+        }
+
+        always {
+            echo 'Day 8 pipeline execution finished.'
+        }
+    }
+}
