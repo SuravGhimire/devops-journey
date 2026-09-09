@@ -1,0 +1,84 @@
+JENKINS DAY 8 — CREDENTIALS AND SECRETS MANAGEMENT
+
+Topics Covered:
+- Jenkins Credentials Store
+- Secret Text credentials
+- Credential IDs
+- withCredentials
+- Secure environment variables
+- Secret masking
+- Keeping secrets out of Git
+
+Key Concepts:
+
+1. Jenkins Credentials
+
+Jenkins provides a Credentials Store for securely storing sensitive information such as:
+- Passwords
+- API tokens
+- SSH keys
+- Secret text
+- Username/password combinations
+
+2. Credential ID
+
+The pipeline does not contain the actual secret.
+
+Instead, it references the credential using its ID:
+
+day8-demo-secret
+
+3. withCredentials
+
+The withCredentials step temporarily makes the stored credential available to the pipeline.
+
+Example:
+
+withCredentials([
+    string(
+        credentialsId: 'day8-demo-secret',
+        variable: 'DEMO_SECRET'
+    )
+])
+
+4. Secret Security
+
+The actual secret value should never be:
+- Hardcoded in the Jenkinsfile
+- Committed to Git
+- Printed in console output
+- Shared publicly
+
+In this practical, the pipeline only displayed the secret length rather than the secret itself.
+
+5. Pipeline Flow
+
+Build
+  ↓
+Load Jenkins Credential
+  ↓
+Use Secret Securely
+  ↓
+Test
+  ↓
+Post Actions
+
+Practical Result:
+
+The Jenkins pipeline successfully accessed the stored credential using withCredentials.
+
+The secret itself was not printed to the Jenkins console.
+
+Real-World Connection:
+
+Credentials are required when CI/CD pipelines interact with:
+- GitHub
+- Docker registries
+- Cloud platforms
+- Kubernetes clusters
+- Deployment servers
+- External APIs
+
+Security Principle:
+
+Store secrets in Jenkins Credentials rather than inside source code.
