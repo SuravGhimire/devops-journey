@@ -1,0 +1,73 @@
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = 'hello-jenkins-day9'
+        CONTAINER_NAME = 'hello-jenkins-day9'
+    }
+
+    stages {
+
+        stage('Build Docker Image') {
+            steps {
+                echo "Building Docker image: ${IMAGE_NAME}"
+
+                sh '''
+                    docker build \
+                        -t ${IMAGE_NAME}:latest \
+                        "$WORKSPACE/CI-CD/Jenkins/Day9"
+                '''
+            }
+        }
+
+        stage('Run Container') {
+            steps {
+                echo "Starting Docker container..."
+
+                sh '''
+                    docker rm -f ${CONTAINER_NAME} 2>/dev/null || true
+
+                    docker run -d \
+                        --name ${CONTAINER_NAME} \
+                        -p 8090:80 \
+                        ${IMAGE_NAME}:latest
+                '''
+            }
+        }
+
+        stage('Test Container') {
+            steps {
+                echo "Testing Docker container..."
+
+                sh '''
+                    sleep 2
+                    curl -f http://localhost:8090
+                '''
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                echo "Cleaning up Docker container..."
+
+                sh '''
+                    docker rm -f ${CONTAINER_NAME} 2>/dev/null || true
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Jenkins successfully built and tested the Docker container.'
+        }
+
+        failure {
+            echo 'Jenkins + Docker pipeline failed.'
+        }
+
+        always {
+            echo 'Day 9 pipeline execution finished.'
+        }
+    }
+}
