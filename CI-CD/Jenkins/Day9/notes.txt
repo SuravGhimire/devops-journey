@@ -1,0 +1,86 @@
+JENKINS DAY 9 — JENKINS + DOCKER INTEGRATION
+
+Topics Covered:
+- Jenkins and Docker integration
+- Jenkins Docker permissions
+- Docker socket access
+- Building Docker images from Jenkins
+- Running Docker containers from Jenkins
+- Testing containers in a pipeline
+- Cleaning up containers after testing
+
+Key Concepts:
+
+1. Jenkins Docker Access
+
+Jenkins runs under the Linux user "jenkins".
+
+To allow Jenkins to communicate with Docker, the jenkins user was added to the docker group.
+
+This allowed Jenkins to access:
+
+/var/run/docker.sock
+
+2. Dockerfile
+
+A simple Nginx Docker image was created for the Day 9 practical.
+
+The image displays:
+
+Hello from Jenkins + Docker!
+
+3. Build Docker Image
+
+The Jenkins pipeline builds the Docker image using:
+
+docker build -t hello-jenkins-day9:latest ...
+
+4. Run Docker Container
+
+The pipeline starts the container using:
+
+docker run -d --name hello-jenkins-day9 -p 8090:80 ...
+
+Port 8090 was used because Jenkins is running on port 8080.
+
+5. Test Container
+
+The pipeline verifies the running container using:
+
+curl -f http://localhost:8090
+
+This confirms that the Nginx application is responding correctly.
+
+6. Cleanup
+
+After testing, Jenkins removes the container:
+
+docker rm -f hello-jenkins-day9
+
+This prevents unused containers from accumulating.
+
+Pipeline Flow:
+
+GitHub
+  ↓
+Jenkins
+  ↓
+Build Docker Image
+  ↓
+Run Docker Container
+  ↓
+Test Application
+  ↓
+Cleanup
+  ↓
+SUCCESS
+
+Practical Result:
+
+Jenkins successfully built the Docker image, started the container, tested the application through port 8090, and cleaned up the container.
+
+Real-World Connection:
+
+Jenkins can be used to automate Docker image builds and container testing as part of a CI/CD pipeline.
+
+This is an important step toward building complete Docker-based CI/CD workflows.
