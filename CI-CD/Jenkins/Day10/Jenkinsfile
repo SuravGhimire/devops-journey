@@ -1,0 +1,122 @@
+pipeline {
+    agent any
+
+    parameters {
+        choice(
+            name: 'ENVIRONMENT',
+            choices: ['development', 'staging', 'production'],
+            description: 'Select deployment environment'
+        )
+    }
+
+    environment {
+        IMAGE_NAME = 'hello-jenkins-final'
+        CONTAINER_NAME = 'hello-jenkins-final'
+        CONTAINER_PORT = '8091'
+    }
+
+    stages {
+
+        stage('Build') {
+            steps {
+                echo "Building application for ${params.ENVIRONMENT}..."
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running application tests...'
+
+                sh '''
+                    echo "Test started"
+                    echo "Environment: ${ENVIRONMENT}"
+                    echo "Application test passed" > test-result.txt
+                    cat test-result.txt
+                '''
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                echo "Building Docker image: ${IMAGE_NAME}"
+
+                sh '''
+                    docker build \
+                        -t ${IMAGE_NAME}:latest \
+                        "$WORKSPACE/CI-CD/Jenkins/Day9"
+                '''
+            }
+        }
+
+        stage('Run Container') {
+            steps {
+                echo "Starting Docker container..."
+
+                sh '''
+                    docker rm -f ${CONTAINER_NAME} 2>/dev/null || true
+
+                    docker run -d \
+                        --name ${CONTAINER_NAME} \
+                        -p ${CONTAINER_PORT}:80 \
+                        ${IMAGE_NAME}:latest
+                '''
+            }
+        }
+
+        stage('Verify Deployment') {
+            steps {
+                echo 'Verifying deployed application...'
+
+                sh '''
+                    sleep 2
+                    curl -f http://localhost:${CONTAINER_PORT}
+                '''
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploying ${IMAGE_NAME} to ${params.ENVIRONMENT}"
+
+                sh '''
+                    docker tag \
+                        ${IMAGE_NAME}:latest \
+                        ${IMAGE_NAME}:${BUILD_NUMBER}
+                '''
+
+                echo "Docker image tagged with build number ${BUILD_NUMBER}"
+            }
+        }
+
+        stage('Archive Test Result') {
+            steps {
+                archiveArtifacts artifacts: 'test-result.txt',
+                                 fingerprint: true
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                echo 'Cleaning up Docker container...'
+
+                sh '''
+                    docker rm -f ${CONTAINER_NAME} 2>/dev/null || true
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Final Jenkins CI/CD pipeline completed successfully.'
+        }
+
+        failure {
+            echo 'Final Jenkins CI/CD pipeline failed.'
+        }
+
+        always {
+            echo 'Jenkins Day 10 pipeline execution finished.'
+        }
+    }
+}

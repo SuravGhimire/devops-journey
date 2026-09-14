@@ -1,0 +1,65 @@
+Jenkins Day 10 — Final CI/CD Project
+
+Goal:
+Build an end-to-end CI/CD pipeline combining the Jenkins concepts learned during Days 1–9.
+
+Pipeline:
+
+GitHub
+↓
+Jenkins
+↓
+Build
+↓
+Test
+↓
+Build Docker Image
+↓
+Run Container
+↓
+Verify Deployment
+↓
+Deploy
+↓
+Archive Test Result
+↓
+Cleanup
+
+Important concepts:
+
+1. Parameters
+The ENVIRONMENT parameter allows the pipeline to run against:
+- development
+- staging
+- production
+
+2. Environment Variables
+IMAGE_NAME, CONTAINER_NAME, and CONTAINER_PORT are defined in the Jenkinsfile.
+
+3. Testing
+The pipeline creates a test-result.txt file and verifies the application test.
+
+4. Docker Integration
+Jenkins builds a Docker image using the Dockerfile from Jenkins Day 9.
+
+5. Container Deployment
+The Docker container runs on port 8091.
+
+6. Deployment Verification
+curl is used to verify that the container is responding successfully.
+
+7. Image Tagging
+The Docker image is additionally tagged using the Jenkins BUILD_NUMBER.
+
+8. Artifact Archiving
+test-result.txt is archived by Jenkins.
+
+9. Cleanup
+The running Docker container is removed after the deployment test.
+
+10. Post Actions
+The pipeline reports success, failure, and completion status.
+
+Final lesson:
+
+This project combines source control, Jenkins automation, Docker, testing, deployment verification, artifacts, and cleanup into one practical CI/CD workflow.
